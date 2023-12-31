@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@700&family=Oswald:wght@600&family=Poppins&display=swap");
+
+:root {
+  --primary-button: rgba(249, 194, 46, 1);
+}
+
+.btn {
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: normal;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.btn--primary {
+  background-color: var(--primary-button);
+  border: 1px solid var(--primary-button);
+}
+
+.btn--primary:hover {
+  background-color: black;
+  color: var(--primary-button);
+  border: 1px solid black; 
+}
+
+.btn--small {
+  width: 140px;
+  height: 40px;
+}
+
+.btn--search {
+  width: 140px;
+  height: 40px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}

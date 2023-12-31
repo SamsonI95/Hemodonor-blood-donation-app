@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@700&family=Oswald:wght@600&family=Poppins&display=swap");
+
+nav {
+    padding-top: 50px;
+    padding-left: 430px;
+    padding-right: 100px;
+}
+
+.nav-menu-items {
+    display: flex;
+    align-items: center;
+    gap: 37px;
+}
+
+.nav-menu-items a {
+  color: #23272b;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.button {
+    position: absolute;
+    top: 35px;
+    left: 80%;
+}
