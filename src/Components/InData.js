@@ -13,7 +13,7 @@ export const InData = [
     },
     {
         title: "Personal Health Benefits",
-        description: "It has a positive effects on your health. - it produce new blood cells, which reduce the risk of certain health conditions.",
+        description: "It has a positive effects on your health. It produce new blood cells, which reduce the risk of certain health conditions.",
         image: "assets/senior-woman-doing-yoga-outdoors-park (1).png",
     },
     {
