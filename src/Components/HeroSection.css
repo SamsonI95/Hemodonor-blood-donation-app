@@ -402,7 +402,18 @@ p {
 .incentive-product-card-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  
+
+  align-items: center;
+  padding: 0 5rem;
+  gap: 20px;
+  row-gap: 40px;
+  margin-top: 40px;
+}
+
+.incentive-product-card-container2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  transform: translateX(15%);
   align-items: center;
   padding: 0 5rem;
   gap: 20px;
@@ -455,3 +466,75 @@ p {
   border-bottom-left-radius: 20px;
   width: 350px;
 }
+
+.testimony-container {
+  margin-top: 80px;
+}
+
+.testimony-carousel-container {
+  padding: 0 30px 0 30px;
+  transform: translateX(50px);
+}
+
+.testimony-header h3 {
+  color: #000;
+  font-family: Inter;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.testimony-header p {
+  color: #000;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.tescard1 {
+  width: 294px;
+  height: 200px;
+  border-radius: 10px;
+  border: 1px solid #000;
+  
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+
+.tescard1 h3,
+p {
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 0 10px 0 10px;
+}
+
+.tescard1 h3 {
+  margin-top: 30px;
+}
+
+.tescard1 p {
+  transform: translateY(60px);
+}
+
+.tescard1 i {
+  float: right;
+  transform: translateY(30px) translateX(-10px);
+}
+
+#circle-image {
+  border-radius: 100%;
+  position: absolute;
+  top: 70%;
+  left: 25%;
+}
+
