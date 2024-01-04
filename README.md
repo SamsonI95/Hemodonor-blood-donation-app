@@ -1,3 +1,7 @@
+# Link to the static site
+
+https://samsoni95.github.io/Hemodonor-blood-donation-app/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
