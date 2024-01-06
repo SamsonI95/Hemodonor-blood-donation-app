@@ -1,0 +1,45 @@
+.carousel-container {
+    overflow: hidden;
+    transform: translateX(15px);
+}
+
+.carousel-inner {
+    display: inline-flex;
+    justify-content: space-between;
+    margin: 25px;
+    padding: 0 20px;
+}
+
+.carousel-buttons {
+    position: relative;
+    transform: translateY(-200px);
+}
+
+.arrow {
+    border: none;
+    background: none;
+    font-size: 20px;
+    position: relative;
+    cursor: pointer;
+    
+}
+
+.arrow.left {
+    left: 15px;
+}
+
+.arrow.right {
+    float: right;
+    right: 50px;
+}
+
+.caousel-inidcators {
+    text-align: center;
+    transform: translateY(-35px);
+}
+
+.caousel-inidcators span {
+    overflow: hidden;
+    margin: 0 5px;
+    
+}

@@ -1,29 +1,15 @@
 import React, { useState } from "react";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
 import "./HeroSection.css";
+import { Carousel } from "./Carousel";
 import { Button } from "./Button";
 import { PrcData } from "./PrcData";
 import { InData } from "./InData";
-import { TesData } from "./TesData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 function HeroSection() {
   const [button, setButton] = useState(true);
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 1024 },
-      items: 3,
-      slidesToSlide: 3,
-    },
-    desktop: {
-      breakpoint: { max: 1024, min: 800 },
-      items: 3,
-      slidesToSlide: 3,
-    },
-  };
+  
 
   return (
     <>
@@ -212,24 +198,7 @@ function HeroSection() {
             stories:
           </p>
         </div>
-        <div className="testimony-carousel-container">
-          <div className="testimony-carousel-content">
-            <Carousel showDots={true} responsive={responsive} containerClass="t-carousel-container">
-              {TesData.map((d) => (
-                <>
-                  <div className="tescard1" id={d.cNmae} style={{width: d.width}}>
-                    <h3>{d.text}</h3>
-                    <p>{d.name}</p>
-                    <i>
-                      <img src={d.quote} />
-                    </i>
-                    <img id="circle-image" src={d.image} />
-                  </div>
-                </>
-              ))}
-            </Carousel>
-          </div>
-        </div>
+        <Carousel/>
       </div>
     </>
   );
