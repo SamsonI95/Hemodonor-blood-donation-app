@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import "./HeroSection.css";
-import { Carousel } from "./Carousel";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
 import { Button } from "./Button";
+import { TesData } from "./TesData";
 import { PrcData } from "./PrcData";
 import { InData } from "./InData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,7 +12,14 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 function HeroSection() {
   const [button, setButton] = useState(true);
-  
+
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+      slidesToSlide: 3,
+    },
+  };
 
   return (
     <>
@@ -198,7 +208,53 @@ function HeroSection() {
             stories:
           </p>
         </div>
-        <Carousel/>
+        <div className="testimony-carousel-container">
+          <div className="testimony-carousel-content">
+            <Carousel
+              showDots={true}
+              responsive={responsive}
+              containerClass="t-carousel-container"
+              itemClass="tescard11"
+              dotListClass="custom-dot-list-style"
+            >
+              {TesData.map((d) => (
+                <>
+                  <div
+                    className={d.cName}
+                    id={d.id}
+                    style={{ border: "1px solid #000", borderRadius: "10px" }}
+                  >
+                    <h3>{d.text}</h3>
+                    <p>{d.name}</p>
+                    <i>
+                      <img className={d.id} src={d.quote} />
+                    </i>
+                  </div>
+                  <img className={d.circ} src={d.image} />
+                </>
+              ))}
+            </Carousel>
+          </div>
+        </div>
+      </div>
+      <div className="bottom-card-container">
+        <div className="bottom-card-text">
+          <h3>Join the sacred heart movement</h3>
+          <p>
+            Ready to make a difference? Join our growing community of heroes
+            today!
+          </p>
+          <div className="bottom-card-button">
+            {button && (
+              <Button buttonStyle="btn--primary" buttonSize="btn--small">
+                Get Started
+              </Button>
+            )}
+          </div>
+        </div>
+        <div className="bottom-card-image">
+          <img src="assets/26363.png" alt="/" />
+        </div>
       </div>
     </>
   );

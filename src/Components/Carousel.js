@@ -23,6 +23,7 @@ export const Carousel = () => {
     );
   };
 
+  console.log(handleNextClick);
 
   return (
     <div className="carousel-container">

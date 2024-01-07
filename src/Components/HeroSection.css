@@ -11,7 +11,7 @@
   width: 1200px;
   height: 557px;
   border-radius: 20px;
-  background: linear-gradient(rgba(191, 219, 247, 1), rgba(238, 134, 134, 0));
+  background: linear-gradient(rgba(191, 219, 247, 1), rgb(255,183,197, 0.5), rgba(238, 134, 134, 0));
   /*border: 1px solid red;*/
   font-family: "Poppins", sans-serif;
 }
@@ -481,6 +481,7 @@ p {
   /*border: 1px solid orange;*/
   padding: 0 50px;
   transform: translateX(-45px);
+  cursor: pointer;
 }
 
 .testimony-header h3 {
@@ -505,59 +506,122 @@ p {
   margin-bottom: 40px;
 }
 
-/*.tescard11 {
-  border: 1px solid blueviolet;
-  margin-right: 5px;
-  
-}
-
-#tescard11 {
-  transform: translateX(-50px);
-}
-
-.target-item {
-  margin: 0 auto;
-  height: 210px;
-  border-radius: 10px;
-  border: 1px solid #000;
-  cursor: pointer;
-  margin-bottom: 50px;
-}
-
-.tescard1 {
-  height: 210px;
-  border-radius: 10px;
-  border: 1px solid #000;
-  cursor: pointer;
-  margin-bottom: 50px;
-}
-
-.tescard1 h3,
+.tescard11 h3,
 p {
+  color: #000;
   font-family: Poppins;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  padding: 0 10px 0 10px;
 }
 
-.tescard1 h3 {
-  margin-top: 30px;
+.item-1-3 {
+  width: 294px;
+  height: 200px;
+  padding: 10px 10px 10px 16px;
+  transform: translateX(80px);
 }
 
-.tescard1 p {
-  transform: translateY(60px);
+.item-2 {
+  padding: 10px 10px 10px 16px;
 }
 
-.tescard1 i {
-  float: right;
-  transform: translateY(30px) translateX(-10px);
+.item-1-3 h3 {
+  transform: translateY(20px);
 }
 
-#circle-image {
+.item-2 h3 {
+  transform: translateY(20px);
+}
+
+.item-1-3 p {
+  transform: translateY(70px);
+}
+
+.item-2 p {
+  transform: translateY(65px);
+}
+
+.item-2 {
+  height: 200px;
+  padding: 10px;
+}
+
+.circle1-3 {
   border-radius: 100%;
-  /*position: absolute;
-  top: 70%;
-  left: 25%;
+  position: relative;
+  left: 42%;
+  bottom: 20px;
+}
+
+.circle2 {
+  border-radius: 100%;
+  position: relative;
+  left: 40%;
+  bottom: 20px;
+}
+
+.image-1-3 {
+  float: right;
+  transform: translateX(-15px) translateY(50px);
+}
+
+.image-2 {
+  float: right;
+  transform: translateX(-15px) translateY(50px);
+}
+
+.custom-dot-list-style {
+  transform: translateX(50px);
+}
+
+.bottom-card-container {
+  display: flex;
+  margin: 80px 50px;
+  padding: 0 10px;
+}
+
+.bottom-card-text {
+  position: absolute;
+  transform: translateY(80px);
+  left: 7%;
+}
+
+.bottom-card-text h3 {
+  color: #454444;
+  font-family: Satoshi;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-align: justify;
+  width: 286px;
+  margin-bottom: 25px;
+}
+
+.bottom-card-text p {
+  color: #454444;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: justify;
+  width: 372px;
+  margin-bottom: 25px;
+}
+
+/*.bottom-card-button {
+  position: absolute;
+  left: 60px;
+  transform: translateY(90px);
 }*/
+
+.bottom-card-image {
+  transform: translateX(60%);
+}
+
+.bottom-card-image img {
+  border-radius: 20px;
+}

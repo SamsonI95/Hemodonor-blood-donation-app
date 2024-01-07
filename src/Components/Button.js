@@ -3,7 +3,7 @@ import "./Button.css";
 import { Link } from "react-router-dom";
 
 const STYLES = ["btn--primary", "btn--noutline", "btn--secondary"];
-const SIZES = ["btn--small", "btn--sl", "btn--medium", "btn--large", "btn--search"];
+const SIZES = ["btn--small", "btn--sl", "btn--medium", "btn--large", "btn--search", "btn--arrow"];
 
 export const Button = ({
   children,

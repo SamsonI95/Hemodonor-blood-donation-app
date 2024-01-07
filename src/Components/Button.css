@@ -43,3 +43,12 @@
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
+
+.btn--arrow {
+  width: 40px;
+  height: 40px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
