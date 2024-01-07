@@ -1,0 +1,55 @@
+.overview-list  {
+  list-style-type: none; /* Remove default numbering */
+  counter-reset: step-counter; /* Reset the counter for numbering */
+}
+
+.overview-item {
+    margin-bottom: 20px;
+    /*margin-left: 25px;*/
+}
+
+.overview-item h3 {
+  font-family: Satoshi;
+  font-size: 20px;
+  align-items: center;
+  justify-content: left;
+  text-align: left;
+  color: #121212;
+  font-style: normal;
+  line-height: normal;
+  padding: 5px 5px 0 5px;
+}
+
+.overview-item p {
+  font-family: Poppins;
+  font-size: 14px;
+  width: 424px;
+  align-items: center;
+  justify-content: left;
+  text-align: left;
+  color: #121212;
+  font-style: normal;
+  line-height: 1.6;
+  position: relative;
+  left: 5px;
+}
+
+.overview-item::before {
+  content: counter(step-counter); /* Use the counter value as content */
+  counter-increment: step-counter; /* Increment the counter for each item */
+  position: absolute;
+  left: 43%;
+  transform: translateY(-50%);
+  width: 40px; /* Adjust to control the circle size */
+  height: 40px; /* Adjust to control the circle size */
+  color: rgba(110, 170, 244, 1); /* Set your desired text color */
+  border: 1px solid #ff0404;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Satoshi;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 25px;
+}

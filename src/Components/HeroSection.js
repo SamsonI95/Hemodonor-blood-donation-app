@@ -2,16 +2,17 @@ import React, { useState } from "react";
 import "./HeroSection.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-
 import { Button } from "./Button";
 import { TesData } from "./TesData";
 import { PrcData } from "./PrcData";
 import { InData } from "./InData";
+import OverviewList from "./overviewList";
+import { overviewData } from "./overviewData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 function HeroSection() {
-  const [button, setButton] = useState(true);
+  const [button] = useState(true);
 
   const responsive = {
     desktop: {
@@ -111,58 +112,10 @@ function HeroSection() {
       <div className="overview-container">
         <div className="overview-header">Process Overview</div>
         <div className="overview-content-card">
-          <img src="assets/Rectangle 119.png" alt="" />
-          <div className="overview-list">
-            <ol>
-              <li>
-                <h3>Registration & Information Gathering</h3>
-                <p>
-                  Donors and recipients register, providing personal details and
-                  blood type information. Also must meet specific eligibility
-                  criteria, including age, weight, and general health
-                </p>
-              </li>
-              <li>
-                <h3>Blood Type & Compatibility matching</h3>
-                <p>
-                  The system matches donors and recipients based on blood type
-                  and compatibility. Also the system considers factors such as
-                  ABO and RhD blood group compatibility.
-                </p>
-              </li>
-              <li>
-                <h3>Donation Requesting & Communication</h3>
-                <p>
-                  Recipients create blood donation requests; donors are notified
-                  and communicate their availability.
-                </p>
-              </li>
-              <li>
-                <h3>Notification and Search</h3>
-                <p>
-                  Donors receive notifications for nearby donation requests that
-                  match their blood type and availability. Recipients will be
-                  notified of nearby donors who match their requirements
-                </p>
-              </li>
-              <li>
-                <h3>Appointment Scheduling & Donation</h3>
-                <p>
-                  Donors and recipients schedule appointments for blood
-                  donation, and the actual donation takes place at a specified
-                  location.
-                </p>
-              </li>
-              <li>
-                <h3>Post-Donation Updates and Feedback</h3>
-                <p>
-                  Donors update their availability, and both parties provide
-                  feedback to ensure a positive experience and encourage future
-                  engagement.
-                </p>
-              </li>
-            </ol>
-          </div>
+          <img src="assets/Rectangle 119.png" alt="/" />
+          <div className="blue-rect"></div>
+          <div className="red-rect"></div>
+          <OverviewList data={overviewData} />
         </div>
       </div>
       <div className="incentive-card">

@@ -11,7 +11,11 @@
   width: 1200px;
   height: 557px;
   border-radius: 20px;
-  background: linear-gradient(rgba(191, 219, 247, 1), rgb(255,183,197, 0.5), rgba(238, 134, 134, 0));
+  background: linear-gradient(
+    rgba(191, 219, 247, 1),
+    rgb(255, 183, 197, 0.5),
+    rgba(238, 134, 134, 0)
+  );
   /*border: 1px solid red;*/
   font-family: "Poppins", sans-serif;
 }
@@ -279,6 +283,10 @@ p {
 
 .overview-container {
   margin-top: 50px;
+  margin-bottom: 30px;
+  height: 100%;
+  align-items: center;
+  padding: 0 60px;
 }
 
 .overview-header {
@@ -301,71 +309,31 @@ p {
   left: 10%;
 }
 
+.overview-content-card img {
+  z-index: 1;
+  transform: translateY(30px);
+  height: 550px;
+}
+
 .overview-list {
   margin-top: 20px;
-  margin-left: 10%;
 }
 
-.overview-list ol {
-  list-style-type: none; /* Remove default numbering */
-  counter-reset: step-counter; /* Reset the counter for numbering */
-}
-
-.overview-list ol li {
-  transition: 0.6s ease-in-out;
-  margin-top: 20px;
-}
-
-.overview-list ol li::before {
-  content: counter(step-counter); /* Use the counter value as content */
-  counter-increment: step-counter; /* Increment the counter for each item */
-  position: absolute;
-  left: 38%;
-  transform: translateY(-50%);
-  width: 40px; /* Adjust to control the circle size */
-  height: 40px; /* Adjust to control the circle size */
-  color: rgba(110, 170, 244, 1); /* Set your desired text color */
-  border: 1px solid #ff0404;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: Satoshi;
-  font-weight: bold;
-  font-size: 30px;
-  margin-top: 25px;
-}
-
-/*.overview-list ol li:hover {
-  transform: translateX(20px);
-  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.26);
-  cursor: pointer;
-}*/
-
-.overview-list ol li h3 {
-  font-family: Satoshi;
-  font-size: 20px;
-  align-items: center;
-  justify-content: left;
-  text-align: left;
-  color: #121212;
-  font-style: normal;
-  line-height: normal;
-  padding: 5px 5px 0 5px;
-}
-
-.overview-list ol li p {
-  font-family: Poppins;
-  font-size: 14px;
-  width: 424px;
-  align-items: center;
-  justify-content: left;
-  text-align: left;
-  color: #121212;
-  font-style: normal;
-  line-height: 1.6;
+.blue-rect {
+  width: 222px;
+  height: 455px;
+  border-radius: 0px 20px 0px 0px;
+  background: #c4d9f3;
   position: relative;
-  left: 5px;
+  right: 15%;
+}
+
+.red-rect {
+  width: 258px;
+  height: 28px;
+  background: #ff0404;
+  position: absolute;
+  transform: translateY(36rem);
 }
 
 .incentive-card {
@@ -433,11 +401,11 @@ p {
   padding-top: 25px;
 }
 
-.incentive-card-text:hover {
+/*.incentive-card-text:hover {
   border: 1px solid #000;
   background: #000;
   color: rgba(249, 194, 46, 1);
-}
+}*/
 
 .incentive-card-text h3 {
   font-family: Poppins;
