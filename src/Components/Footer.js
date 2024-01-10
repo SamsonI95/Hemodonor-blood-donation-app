@@ -1,4 +1,4 @@
-import Reac, { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "./Button";
 import "./Footer.css";
@@ -36,8 +36,8 @@ function Footer() {
               )}
             </div>
             <div className="legal-card">
-                <a href="#">Terms & Conditions</a>
-                <a href="#">Privacy Policy</a>
+              <Link to="/terms">Terms & Conditions</Link>
+              <Link to="/privacy">Privacy Policy</Link>
           </div>
           </div>
         

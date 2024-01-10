@@ -11,7 +11,7 @@ function NavBar() {
     <>
       <nav>
         <ul className="nav-menu-items">
-            <a href="#">Home</a>
+            <Link to="/home">Home</Link>
             <a href="#">About Us</a>
             <a href="#">Donate Blood</a>
             <a href="#">Find Donor</a>
