@@ -1,0 +1,4 @@
+.term-content ol ul li {
+    list-style-type: circle;
+    margin-block-start: 10px;
+}

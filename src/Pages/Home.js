@@ -1,5 +1,5 @@
 import React from "react";
-import HeroSection from "../Components/HeroSection";
+import HeroSection from "../Components/PagesComponents/HeroSection";
 
 function Home() {
   return <HeroSection></HeroSection>;

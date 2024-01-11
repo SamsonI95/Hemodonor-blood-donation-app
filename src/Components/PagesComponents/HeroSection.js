@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import "./HeroSection.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { Button } from "./Button";
-import { TesData } from "./TesData";
-import { PrcData } from "./PrcData";
-import { InData } from "./InData";
+import { Button } from "../Reusables/Button";
+import { TesData } from "../Data Folder/TesData";
+import { PrcData } from "../Data Folder/PrcData";
+import { InData } from "../Data Folder/InData";
 import OverviewList from "./overviewList";
-import { overviewData } from "./overviewData";
+import { overviewData } from "../Data Folder/overviewData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 

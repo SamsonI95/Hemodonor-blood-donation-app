@@ -13,7 +13,7 @@ function NavBar() {
         <ul className="nav-menu-items">
             <Link to="/home">Home</Link>
             <a href="#">About Us</a>
-            <a href="#">Donate Blood</a>
+            <Link to="/donate-blood">Donate Blood</Link>
             <a href="#">Find Donor</a>
             <a href="#">Contact Us</a>
         </ul>

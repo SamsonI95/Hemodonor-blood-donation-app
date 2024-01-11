@@ -1,5 +1,5 @@
 import React from "react";
-import PrivacyHero from "../Components/PrivacyHero";
+import PrivacyHero from "../Components/PagesComponents/PrivacyHero";
 
 function PrivacyStatement () {
     return <PrivacyHero></PrivacyHero>

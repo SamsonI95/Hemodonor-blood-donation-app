@@ -1,25 +1,39 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.css';
-import Home from './Pages/Home';
-import NavBar from './Components/NavBar';
-import Footer from './Components/Footer';
-import PrivacyStatement from './Pages/PrivacyStatementPage';
-import TermsPage from './Pages/TermsPage';
+// App
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
+import "./App.css";
+
+//Pages
+import Home from "./Pages/Home";
+import DonateBlood from "./Pages/DonateBlood";
+import PrivacyStatement from "./Pages/PrivacyStatementPage";
+import TermsPage from "./Pages/TermsPage";
+
+//Components
+import NavBar from "./Components/Reusables/NavBar";
+import Footer from "./Components/Reusables/Footer";
+import HideFooter from "./Components/Reusables/HideFooter";
 
 function App() {
   return (
-     <>
+    <>
       <Router>
         <NavBar />
         <Routes>
-          <Route path="/home" exact Component={Home} />
-          <Route path="/terms" Component={TermsPage} />
-          <Route path="/privacy" Component={PrivacyStatement} />
+          <Route path="/home" exact element={<Home />} />
+          <Route path="/donate-blood" element={<DonateBlood/>}/>
+          <Route path="/terms" element={<TermsPage />} />
+          <Route path="/privacy" element={<PrivacyStatement />} />
         </Routes>
-        <Footer />
+        <HideFooter>
+          <Footer />
+        </HideFooter>  
       </Router>
-     </>
+    </>
   );
 }
 
