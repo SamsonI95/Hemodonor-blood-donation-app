@@ -9,7 +9,7 @@ const HideFooter = ({ children }) => {
     if (location.pathname === "/donate-blood") {
       setShowFooter(false);
     } else {
-      setShowFooter(false);
+      setShowFooter(true);
     }
   }, [location]);
 
