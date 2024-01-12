@@ -6,13 +6,15 @@ const HideFooter = ({ children }) => {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.pathname === "/donate-blood") {
+    if (location.pathname === "/donate-blood" || location.pathname === "/register") {
       setShowFooter(false);
     } else {
       setShowFooter(true);
     }
   }, [location]);
 
-  return <div>{ showFooter && children }</div>;
+  return (
+    <div>{ showFooter && children }</div>
+  );
 };
 export default HideFooter;

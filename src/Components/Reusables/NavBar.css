@@ -10,6 +10,7 @@ nav {
   display: flex;
   align-items: center;
   gap: 37px;
+  transform: translateX(-80px);
 }
 
 .nav-menu-items a {
@@ -34,7 +35,6 @@ nav {
   left: 0;
   width: 91px;
   height: 5px;
-  background-color: #BFDBF7; /* Same color as the border */
 }
 
 .button {
@@ -42,3 +42,11 @@ nav {
   top: 35px;
   left: 80%;
 }
+
+.register-dropdown {
+  display: block;
+  height: 100px;
+  width: 250px;
+  border: 1px solid red;
+}
+

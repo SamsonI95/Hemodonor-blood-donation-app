@@ -1,0 +1,82 @@
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  width: 600px;
+  height: 464px;
+  border: 1px solid #f9c22e;
+  border-radius: 8px;
+  box-shadow: 0px 4px 90px 2px rgba(219, 215, 215, 0.25);
+  text-align: center;
+  margin-top: 50px;
+}
+
+form > h3 {
+  color: #000;
+  font-family: Poppins;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  transform: translateY(50px);
+  height: 50px;
+}
+
+form > p {
+  color: #000;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 50px;
+  transform: translateY(30px) translateX(22%);
+  width: 477px;
+  text-align: left;
+}
+
+form > input {
+  width: 398px;
+  height: 34px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  background: #fff;
+  backdrop-filter: blur(2px);
+  margin-top: 3rem;
+}
+
+form > input:placeholder-shown {
+  color: rgba(0, 0, 0, 0.28);
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-left: 30px;
+}
+
+.button-reg {
+  transform: translateY(3rem);
+}
+
+.otp-input-container {
+  display: flex;
+  transform: translateX(36%) translateY(45px);
+  margin-bottom: 50px;
+}
+
+.otp-input {
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

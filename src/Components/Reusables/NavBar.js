@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Dropdown from "./Dropdown";
 import { Button } from "./Button";
 import "./NavBar.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 const NavBar = () => {
   //button logic
@@ -13,14 +16,38 @@ const NavBar = () => {
     setSelectedLink(link);
   };
 
+  //dropdown logic
+  const [dropdown, setDropdown] = useState(false);
+  const handleDropdownClick = () => {
+    setDropdown(!dropdown);
+  };
+
   return (
     <>
       <nav>
         <ul className="nav-menu-items">
-          <Link to="/home" onClick={() => handleLinkClick('home')} className={selectedLink === 'home' ? 'selected' : ''}>Home</Link>
+          <Link
+            to="/home"
+            onClick={() => handleLinkClick("home")}
+            className={selectedLink === "home" ? "selected" : ""}
+          >
+            Home
+          </Link>
           <a href="#">About Us</a>
-          <Link to="/donate-blood"onClick={() => handleLinkClick('donate')} className={selectedLink === 'donate' ? 'selected' : ''}>Donate Blood</Link>
+          <Link
+            to="/donate-blood"
+            onClick={() => handleLinkClick("donate")}
+            className={selectedLink === "donate" ? "selected" : ""}
+          >
+            Donate Blood
+          </Link>
           <a href="#">Find Donor</a>
+          <Link
+            onClick={() => handleDropdownClick()}
+            className={selectedLink === "register" ? "selected" : ""}
+          >
+            Register
+          </Link>
           <a href="#">Contact Us</a>
         </ul>
         <div className="button">
@@ -31,6 +58,7 @@ const NavBar = () => {
           )}
         </div>
       </nav>
+      {dropdown && <Dropdown />} {/* Render the dropdown conditionally */}
     </>
   );
 };

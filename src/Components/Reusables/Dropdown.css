@@ -1,0 +1,42 @@
+.drop-item {
+  border: 1px solid #BFDBF7;
+  width: fit-content;
+  align-items: center;
+  border-radius: 10px;
+  position: absolute;
+  top: 15%;
+  left: 55%;
+  padding: 0 16px;
+  z-index: 1;
+  background-color: white;box-shadow: 0px 4px 90px 2px rgba(219, 215, 215, 0.25);
+}
+
+.drop-item.clicked {
+    display: none;
+}
+
+.drop-link {
+  font-family: poppins;
+  margin: 20px auto;
+}
+
+.drop-item li {
+  padding-bottom: 15px;
+  border-bottom: 2px solid #ccc; /* Add a border between list items */
+}
+
+.drop-item li:last-child {
+  border-bottom: none; /* Remove the border for the last list item */
+  padding-bottom: 1px;
+}
+
+.a1,
+.a2 {
+  text-decoration: none;
+  color: black;
+}
+
+.a1:hover,
+.a2:hover { 
+    color: #F9C22E;
+}

@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+.toggle-button {
+  display: flex;
+  width: 337px;
+  height: 51.5px;
+  border: 1px solid red;
+  border-radius: 30px;
+  background: rgba(234, 234, 234, 0.2);
+  box-shadow: 0px 2px 4px 0px rgba(97, 97, 97, 0.2) inset,
+    0px 1px 2px 0px rgba(97, 97, 97, 0.2) inset;
+  transition: background-color 0.3s;
+}
+
+.toggle-button h3 {
+  color: #000;
+  font-variant-numeric: lining-nums tabular-nums;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 30px */
+  letter-spacing: 0.336px;
+  text-align: center;
+  transform: translateY(5px);
+}
+
+.toggle-left {
+  width: 162px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 30px;
+  background: #bfdbf7;
+  margin: 5px;
+}
+
+.toggle-right {
+  width: 162px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 30px;
+  background: #bfdbf7;
+  margin: 5px 5px 5px 170px;
+}
+
+/*.left-text,
+.right-text {
+  flex: 1;
+  text-align: center;
+  align-items: center;
+  position: relative;
+  top: 7px;
+}
+
+.left-text {
+  order: 1;
+  background-color: white;
+  border-radius: 30px;
+  height: 30px;
+  transform: translateY(-3px) translateX(3px);
+}
+
+.left-text h3 {
+  color: #000;
+  font-family: poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; 
+  letter-spacing: 0.336px;
+  cursor: pointer;
+  position: relative;
+  top: 3px;
+}
+
+.right-text h3 {
+  color: #000;
+  font-family: poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0.336px;
+  cursor: pointer;
+}
+
+.right-text {
+  order: 2;
+}
+
+.left-focused {
+  background-color: #bfdbf7;
+}
+
+.right-focused {
+  background-color: white;
+}*/

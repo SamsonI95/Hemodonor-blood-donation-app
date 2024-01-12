@@ -11,7 +11,7 @@ import { overviewData } from "../Data Folder/overviewData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
-function HeroSection() {
+const HeroSection = () => {
   const [button] = useState(true);
 
   const responsive = {
