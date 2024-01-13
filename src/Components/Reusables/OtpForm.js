@@ -41,7 +41,7 @@ const OtpForm = () => {
   return (
     <div className="form-container">
       {currentStep === 1 ? (
-        <form onSubmit={handlePhoneNumberSubmit}>
+        <form onSubmit={handlePhoneNumberSubmit} className="otp-form">
           <h3>Registration</h3>
           <p>An OTP will be sent to your mobile number for verification</p>
           <input

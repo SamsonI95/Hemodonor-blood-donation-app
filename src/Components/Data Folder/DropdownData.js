@@ -1,12 +1,12 @@
 export  const DropdownData = [
     {
         item: "Register as a Donor",
-        path: "/",
+        path: "./donor-form",
         cName: "a1",
     },
     {
         item: "Register as an Organisation",
-        path: "/",
+        path: "./org-form",
         cName: "a2",
     },
 ]

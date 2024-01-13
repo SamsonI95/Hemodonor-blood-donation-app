@@ -6,10 +6,10 @@ const HideFooter = ({ children }) => {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.pathname === "/donate-blood" || location.pathname === "/register") {
-      setShowFooter(false);
-    } else {
+    if (location.pathname === "/home" || location.pathname === "/terms" || location.pathname === "/privacy") {
       setShowFooter(true);
+    } else {
+      setShowFooter(false);
     }
   }, [location]);
 

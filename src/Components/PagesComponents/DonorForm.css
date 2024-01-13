@@ -1,0 +1,285 @@
+.donor-header {
+  width: 100%;
+  height: 165px;
+  background-color: #bfdbf7;
+  margin-top: 40px;
+}
+
+.donor-header h3 {
+  height: 50px;
+  color: #000;
+  font-family: Poppins;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  transform: translateY(3rem);
+}
+
+.donor-form {
+  display: block;
+  padding: 30px 20px 0 20px;
+  margin: 20px 20px 0 20px;
+}
+
+.donor-form h3 {
+  color: #000;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.donor-form input::placeholder {
+  color: ##a9a9a9;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-indent: 30px;
+}
+
+.name,
+.phone,
+.email,
+.address,
+.age,
+.blood-group,
+.lga,
+.state,
+.postal,
+.time-frame,
+.validate {
+  display: flex;
+  margin-bottom: 3rem;
+}
+
+.age,
+.blood-group,
+.state {
+  transform: translateX(53%) translateY(-13rem);
+}
+
+.name h3 {
+  position: absolute;
+  transform: translateY(15px);
+}
+
+.name input {
+  width: 460px;
+  height: 58px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: 1px solid rgba(69, 68, 68, 1);
+  background: #fff;
+  font-size: 24px;
+  text-indent: 34px;
+  margin: 0 50px;
+  transform: translateX(8rem);
+}
+
+.phone h3 {
+  position: absolute;
+  transform: translateY(15px);
+}
+
+.phone input {
+  width: 950px;
+  height: 58px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: 1px solid #454444;
+  background: #fff;
+  font-size: 24px;
+  text-indent: 34px;
+  transform: translateX(26%);
+}
+
+.email h3 {
+  position: absolute;
+  transform: translateY(15px);
+}
+
+.email input {
+  width: 900px;
+  height: 58px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: 1px solid #454444;
+  background: #fff;
+  font-size: 24px;
+  text-indent: 34px;
+  margin-left: 23.5%;
+}
+
+.address h3 {
+  line-height: normal;
+  position: absolute;
+  transform: translateY(15px);
+}
+
+.address input {
+  width: 460px;
+  height: 172px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: 1px solid #454444;
+  background: #fff;
+  font-size: 24px;
+  text-indent: 34px;
+  margin-left: 70px;
+  transform: translateX(55px);
+}
+
+.address input::placeholder {
+    transform: translateY(-50px);
+}
+
+.age h3 {
+  position: absolute;
+  transform: translateY(15px);
+}
+
+.age input {
+  width: 420px;
+  height: 59px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: 1px solid #454444;
+  background: #fff;
+  font-size: 24px;
+  text-indent: 34px;
+  margin-left: 50px;
+  transform: translateX(58px);
+}
+
+.blood-group h3 {
+  position: absolute;
+  transform: translateY(15px);
+}
+
+.blood-group input {
+  width: 341px;
+  height: 58px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: 1px solid #454444;
+  background: #fff;
+  font-size: 24px;
+  text-indent: 34px;
+  margin-left: 30px;
+  transform: translateX(9.8rem);
+}
+
+.lga {
+  transform: translateY(-19rem);
+}
+
+.lga h3 {
+  position: absolute;
+  transform: translateY(15px);
+}
+
+.lga input {
+  width: 460px;
+  height: 59px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: 1px solid #454444;
+  background: #fff;
+  font-size: 24px;
+  text-indent: 34px;
+  margin-left: 60px;
+  transform: translateX(64px);
+}
+
+.state h3 {
+  position: absolute;
+  transform: translateY(15px);
+}
+
+.state input {
+  width: 334px;
+  height: 59px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: 1px solid #454444;
+  background: #fff;
+  font-size: 24px;
+  text-indent: 34px;
+  margin-left: 12rem;
+}
+
+.postal {
+  transform: translateY(-18rem);
+}
+
+.postal h3 {
+  position: absolute;
+  transform: translateY(15px);
+}
+
+.postal input {
+  width: 460px;
+  height: 58px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: 1px solid #454444;
+  background: #fff;
+  font-size: 24px;
+  text-indent: 34px;
+  margin-left: 25px;
+  transform: translateX(9rem);
+}
+
+.time-frame {
+  transform: translateY(-15rem);
+}
+
+.time-frame h3 {
+  position: absolute;
+  transform: translateY(15px);
+}
+
+.time-frame input {
+  width: 438px;
+  height: 59px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: 1px solid #454444;
+  background: #fff;
+  font-size: 24px;
+  text-indent: 34px;
+  margin: 0 50px;
+  transform: translateX(41%);
+}
+
+.validate {
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  bottom: 10rem;
+}
+
+.validate p {
+  transform: translateX(15px);
+  color: #000;
+  font-family: Poppins;
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.validate input[type="checkbox"]:checked {
+  accent-color: #000;
+}
+
+
+.submit {
+    float: right;
+    transform: translateY(-80px) translateX(-70px);
+}

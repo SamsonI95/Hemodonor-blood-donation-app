@@ -1,0 +1,72 @@
+.org-form {
+  display: block;
+  padding: 30px 20px 0 40px;
+  margin: 20px 20px 10px 20px;
+}
+
+.org-form h3 {
+  color: #000;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.head {
+  display: flex;
+}
+
+.head input {
+  width: 522px;
+  height: 58px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: 1px solid #454444;
+  background: #fff;
+  margin-bottom: 30px;
+  transform: translateX(40%);
+}
+
+.head input::placeholder {
+  color: ##a9a9a9;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-indent: 30px;
+}
+
+.org-form > .phone input {
+  width: 522px;
+  height: 58px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: 1px solid #454444;
+  background: #fff;
+  margin-left: 60px;
+  margin-bottom: 30px;
+}
+
+.org-form > .name input {
+  margin-left: 10%;
+}
+
+.org-form .head input {
+  margin-left: 5%;
+}
+
+.org-form > .submit {
+  margin-top: 70px;
+}
+
+.org-form > .head h3 {
+  position: absolute;
+  transform: translateY(15px);
+}
+
+.org-form > .phone h3 {
+  transform: translateY(15px);
+
+}

@@ -4,7 +4,7 @@ import Dropdown from "./Dropdown";
 import { Button } from "./Button";
 import "./NavBar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 const NavBar = () => {
   //button logic
@@ -48,6 +48,11 @@ const NavBar = () => {
           >
             Register
           </Link>
+          <FontAwesomeIcon
+            icon={faChevronDown}
+            className="down-icon"
+            onClick={() => handleDropdownClick()}
+          />
           <a href="#">Contact Us</a>
         </ul>
         <div className="button">
