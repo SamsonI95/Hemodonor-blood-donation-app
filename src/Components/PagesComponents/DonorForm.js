@@ -20,6 +20,7 @@ const DonorForm = () => {
   const [year, setYear] = useState("");
   const [isFormFilled, setIsFormFilled] = useState(false); // New state variable
 
+
   useEffect(() => {
     setIsFormFilled(
       checkboxChecked &&
@@ -56,17 +57,48 @@ const DonorForm = () => {
     setCheckboxChecked(!checkboxChecked);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (isFormFilled) {
-      console.log("Form submitted successfully!");
+      try {
+        const response = await fetch("http://localhost:5000/api/donor-form", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            // Include all your form data here
+            firstName,
+            lastName,
+            phoneNumber,
+            email,
+            address,
+            age,
+            bloodGroup,
+            state,
+            lga,
+            postalCode,
+            month,
+            year,
+          }),
+        });
+
+        if (response.ok) {
+          console.log("Form submitted successfully!");
+          // You may want to reset the form or redirect the user after a successful submission
+        } else {
+          console.error("Failed to submit form");
+        }
+      } catch (error) {
+        console.error("Error submitting form:", error);
+      }
     } else {
       console.log("Please fill in all fields and accept the terms.");
     }
   };
 
   //Button styling and typed
-  const [button, setButton] = useState(true);
+  const [button] = useState(true);
 
   return (
     <>
@@ -186,7 +218,6 @@ const DonorForm = () => {
           {button && (
             <Button
               type="submit"
-              onClick={handleSubmit}
               buttonStyle={!isFormFilled ? "btn--validate" : "btn--disable"}
               buttonSize=".btn--small"
               disabled={

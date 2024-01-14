@@ -5,45 +5,31 @@ import "./OtpForm.css";
 //Components
 import { Button } from "./Button";
 
-const SERVER_IP = "http://localhost:4000";
-
 const OtpForm = () => {
-  const [phone_number, setPhoneNumber] = useState(""); // Set default Numeber to "1234567890"
+  const [phone_number, setPhoneNumber] = useState('');
   const [codeSent, setCodeSent] = useState(false);
-  const [code, setCode] = useState("");
-  const [button] = useState(true);
+  const [code, setCode] = useState(['', '', '', '']);
+  const [verificationStatus, setVerificationStatus] = useState('');
 
-  async function sendCode() {
-    await fetch(SERVER_IP + "/api/send-code", {
-      method: "POST",
-      headers: {
-        "Accept": "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ phone_number:phone_number }),
-    }).then((response) => {
-      console.log(response);
-      if (response.ok === true) {
-        alert("Verification code sent successfully");
-        setCodeSent(true);
-      } else alert("Oh no we have an error");
-    });
-  }
-  async function verifyCode() {
-    await fetch(SERVER_IP + "/api/verify-code", {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ phone_number: phone_number, code: code }),
-    }).then((response) => {
-      console.log(response);
-      if (response.ok === true) {
-        alert("Number verified successfully");
-      } else alert("Oh no we have an error");
-    });
-  }
+  const sendCode = () => {
+    // Simulate sending OTP to the user's phone number (for testing purposes)
+    // In a real-world scenario, this should be handled by a backend service
+    // and returned to the client for verification.
+    setCodeSent(true);
+  };
+
+  const verifyCode = () => {
+    const enteredCode = code.join('');
+
+    // Simulate verification (for testing purposes)
+    // In a real-world scenario, this should be handled by a backend service
+    // and returned to the client for verification.
+    if (enteredCode === '1234') {
+      setVerificationStatus('Verification successful!');
+    } else {
+      setVerificationStatus('Incorrect OTP. Please try again.');
+    }
+  };
 
   return (
     <div className="form-container">
@@ -55,19 +41,11 @@ const OtpForm = () => {
             type="text"
             value={phone_number}
             onChange={(e) => setPhoneNumber(e.target.value)}
-            placeholder="Enter  your mobile number"
+            placeholder="Enter your mobile number"
             className="input"
           />
           <div className="button-reg">
-            {button && (
-              <Button
-                buttonStyle="btn--primary"
-                buttonSize="btn--small"
-                onClick={async () => await sendCode()}
-              >
-                Get OTP
-              </Button>
-            )}
+            <button onClick={sendCode}>Get OTP</button>
           </div>
         </form>
       ) : (
@@ -80,23 +58,20 @@ const OtpForm = () => {
                 key={index}
                 type="text"
                 value={digit}
-                onChange={(e) => setCode(e.target.value)}
+                onChange={(e) => {
+                  const newCode = [...code];
+                  newCode[index] = e.target.value;
+                  setCode(newCode);
+                }}
                 maxLength="1"
                 className="otp-input"
               />
             ))}
           </div>
           <div className="button-reg">
-            {button && (
-              <Button
-                buttonStyle="btn--primary"
-                buttonSize="btn--medium"
-                onClick={async () => await verifyCode()}
-              >
-                Verify & Proceed
-              </Button>
-            )}
+            <button onClick={verifyCode}>Verify & Proceed</button>
           </div>
+          <p>{verificationStatus}</p>
         </form>
       )}
     </div>
