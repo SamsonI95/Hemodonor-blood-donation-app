@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 import { Button } from "../Reusables/Button";
 import "./DonorForm.css";
 
@@ -17,6 +18,39 @@ const DonorForm = () => {
   const [postalCode, setPostalCode] = useState("");
   const [month, setMonth] = useState("");
   const [year, setYear] = useState("");
+  const [isFormFilled, setIsFormFilled] = useState(false); // New state variable
+
+  useEffect(() => {
+    setIsFormFilled(
+      checkboxChecked &&
+        firstName &&
+        lastName &&
+        phoneNumber &&
+        email &&
+        address &&
+        age &&
+        bloodGroup &&
+        state &&
+        lga &&
+        postalCode &&
+        month &&
+        year
+    );
+  }, [
+    checkboxChecked,
+    firstName,
+    lastName,
+    phoneNumber,
+    email,
+    address,
+    age,
+    bloodGroup,
+    state,
+    lga,
+    postalCode,
+    month,
+    year,
+  ]);
 
   const handleCheckboxChange = () => {
     setCheckboxChecked(!checkboxChecked);
@@ -24,23 +58,7 @@ const DonorForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Perform submit logic here if needed
-    if (
-      checkboxChecked &&
-      firstName &&
-      lastName &&
-      phoneNumber &&
-      email &&
-      address &&
-      age &&
-      bloodGroup &&
-      state &&
-      lga &&
-      postalCode &&
-      month &&
-      year
-    ) {
-      // Add your submission logic here
+    if (isFormFilled) {
       console.log("Form submitted successfully!");
     } else {
       console.log("Please fill in all fields and accept the terms.");
@@ -168,7 +186,8 @@ const DonorForm = () => {
           {button && (
             <Button
               type="submit"
-              buttonStyle="btn--validate"
+              onClick={handleSubmit}
+              buttonStyle={!isFormFilled ? "btn--validate" : "btn--disable"}
               buttonSize=".btn--small"
               disabled={
                 !checkboxChecked ||

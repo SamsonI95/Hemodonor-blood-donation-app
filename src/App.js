@@ -1,10 +1,6 @@
 // App
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 
 //Pages
@@ -26,8 +22,9 @@ function App() {
       <Router>
         <NavBar />
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/home" exact element={<Home />} />
-          <Route path="/donate-blood" element={<DonateBlood/>}/>
+          <Route path="/donate-blood" element={<DonateBlood />} />
           <Route path="/donor-form" element={<DonorForm />} />
           <Route path="/org-form" element={<OrgForm />} />
           <Route path="/terms" element={<TermsPage />} />
@@ -35,7 +32,7 @@ function App() {
         </Routes>
         <HideFooter>
           <Footer />
-        </HideFooter>  
+        </HideFooter>
       </Router>
     </>
   );

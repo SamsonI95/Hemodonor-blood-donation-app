@@ -23,7 +23,7 @@
   line-height: normal;
   margin-top: 50px;
   margin-bottom: 20px;
-  transoform: translateY(50px);
+  transform: translateY(50px);
   height: 50px;
 }
 
@@ -49,6 +49,7 @@
   background: #fff;
   backdrop-filter: blur(2px);
   margin-top: 3rem;
+  text-indent: 50px;
 }
 
 .otp-form > input:placeholder-shown {

@@ -5,77 +5,82 @@ import "./OtpForm.css";
 //Components
 import { Button } from "./Button";
 
+const SERVER_IP = "http://localhost:4000";
+
 const OtpForm = () => {
-  const [phoneNumber, setPhoneNumber] = useState("1234567890"); // Set default Numeber to "1234567890"
-  const [otp, setOtp] = useState(["1", "2", "3", "4"]); // Set default OTP to "1234"
-  const [currentStep, setCurrentStep] = useState(1);
-  const [error, setError] = useState("");
-  const [button, setButton] = useState(true);
+  const [phone_number, setPhoneNumber] = useState(""); // Set default Numeber to "1234567890"
+  const [codeSent, setCodeSent] = useState(false);
+  const [code, setCode] = useState("");
+  const [button] = useState(true);
 
-  const handlePhoneNumberSubmit = (e) => {
-    e.preventDefault();
-
-    if (/^\d{11}$/.test(phoneNumber)) {
-      console.log('Phone number is valid. Switching to OTP step.');
-      setCurrentStep(2);
-      setError("");
-    } else {
-      setError("Invalid phone number. Please enter a valid 11-digit number.");
-    }
-  };
-
-  const handleOtpSubmit = (e) => {
-    e.preventDefault();
-
-    // Simple OTP validation (4 digits)
-    if (/^\d{4}$/.test(otp.join(""))) {
-      // You can perform further actions here, e.g., authentication
-      setError("");
-      console.log("Phone Number:", phoneNumber);
-      console.log("OTP:", otp.join(""));
-    } else {
-      setError("Invalid OTP. Please enter a valid 4-digit OTP.");
-    }
-  };
+  async function sendCode() {
+    await fetch(SERVER_IP + "/api/send-code", {
+      method: "POST",
+      headers: {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ phone_number:phone_number }),
+    }).then((response) => {
+      console.log(response);
+      if (response.ok === true) {
+        alert("Verification code sent successfully");
+        setCodeSent(true);
+      } else alert("Oh no we have an error");
+    });
+  }
+  async function verifyCode() {
+    await fetch(SERVER_IP + "/api/verify-code", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ phone_number: phone_number, code: code }),
+    }).then((response) => {
+      console.log(response);
+      if (response.ok === true) {
+        alert("Number verified successfully");
+      } else alert("Oh no we have an error");
+    });
+  }
 
   return (
     <div className="form-container">
-      {currentStep === 1 ? (
-        <form onSubmit={handlePhoneNumberSubmit} className="otp-form">
+      {!codeSent ? (
+        <form className="otp-form">
           <h3>Registration</h3>
           <p>An OTP will be sent to your mobile number for verification</p>
           <input
             type="text"
-            value={phoneNumber}
+            value={phone_number}
             onChange={(e) => setPhoneNumber(e.target.value)}
             placeholder="Enter  your mobile number"
             className="input"
           />
           <div className="button-reg">
             {button && (
-              <Button buttonStyle="btn--primary" buttonSize="btn--small">
+              <Button
+                buttonStyle="btn--primary"
+                buttonSize="btn--small"
+                onClick={async () => await sendCode()}
+              >
                 Get OTP
               </Button>
             )}
           </div>
         </form>
       ) : (
-        <form onSubmit={handleOtpSubmit}>
+        <form>
           <h3>OTP Verification</h3>
           <p>An OTP has been sent to XXX XXX XXXX</p>
           <div className="otp-input-container">
-            {otp.map((digit, index) => (
+            {code.map((digit, index) => (
               <input
                 key={index}
                 type="text"
                 value={digit}
-                onChange={(e) =>
-                  setOtp((prevOtp) => {
-                    const newOtp = [...prevOtp];
-                    newOtp[index] = e.target.value;
-                    return newOtp;
-                  })
-                }
+                onChange={(e) => setCode(e.target.value)}
                 maxLength="1"
                 className="otp-input"
               />
@@ -83,15 +88,17 @@ const OtpForm = () => {
           </div>
           <div className="button-reg">
             {button && (
-              <Button buttonStyle="btn--primary" buttonSize="btn--medium">
+              <Button
+                buttonStyle="btn--primary"
+                buttonSize="btn--medium"
+                onClick={async () => await verifyCode()}
+              >
                 Verify & Proceed
               </Button>
             )}
           </div>
         </form>
       )}
-
-      {error && <p style={{ color: "red" }}>{error}</p>}
     </div>
   );
 };
