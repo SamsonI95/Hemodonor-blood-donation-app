@@ -10,6 +10,7 @@ import PrivacyStatement from "./Pages/PrivacyStatementPage";
 import TermsPage from "./Pages/TermsPage";
 import DonorForm from "./Components/PagesComponents/DonorForm";
 import OrgForm from "./Components/PagesComponents/OrgForm";
+import OtpForm from "./Components/Reusables/OtpForm";
 
 //Components
 import NavBar from "./Components/Reusables/NavBar";
@@ -27,6 +28,7 @@ function App() {
           <Route path="/donate-blood" element={<DonateBlood />} />
           <Route path="/donor-form" element={<DonorForm />} />
           <Route path="/org-form" element={<OrgForm />} />
+          <Route path="/otp-form" element={<OtpForm />} />
           <Route path="/terms" element={<TermsPage />} />
           <Route path="/privacy" element={<PrivacyStatement />} />
         </Routes>

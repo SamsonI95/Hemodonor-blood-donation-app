@@ -1,0 +1,146 @@
+.toggle-button-switch {
+    position: relative;
+    left: 37%;
+    top: 30px;
+}
+
+.info-call-card {
+    padding: 50px 55px;
+}
+
+.info-call-card-header {
+  display: flex;
+  width: 1240px;
+  height: 148px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 90px 2px rgba(209, 205, 205, 0.25);
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid red;
+}
+
+.info-call-card-header ul {
+  transform: translateY(15px);
+  width: 659px;
+  list-style-type: none;
+}
+
+.info-call-card-header ul li {
+  color: #3c3c3c;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px; /* 166.667% */
+  letter-spacing: 0.9px;
+  text-align: justify;
+  align-items: center;
+  justify-content: left;
+  margin-bottom: 15px;
+}
+
+.call {
+  transform: translateX(19rem) translateY(15px);
+}
+
+.call h4 {
+  width: 159.457px;
+  color: rgba(0, 0, 0, 0.6);
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transform: translateY(17px);
+}
+
+.info-call-card-container {
+  width: 1240px;
+  height: 780px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 90px 2px rgba(209, 205, 205, 0.25);
+  padding: 14px 52px 14px 52px;
+  border: 1px solid red;
+}
+
+.refresh {
+  float: right;
+  transform: translateY(20px);
+}
+
+.tag-1 {
+  transform: translateY(20px);
+}
+
+.tag-1 li {
+  color: #000;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 20px;
+}
+
+.tag-1 li p {
+  text-indent: 20px;
+  margin-top: 20px;
+}
+
+.line-through {
+  width: 1240px;
+  height: 1.5px;
+  background: #b9b8b8;
+  position: absolute;
+  left: 55px;
+  margin: 20px 0;
+}
+
+.tag-2 {
+    transform: translateY(30px);
+}
+
+.dropdown-card-arrow {
+  float: right;
+  margin-top: 20px;
+}
+
+.alert-text {
+  display: flex;
+  margin-top: 20px;
+}
+
+.alert-text h3 {
+  color: rgba(53, 53, 53, 1);
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 492.236px;
+  margin-left: 10px;
+}
+
+.card-select {
+    height: 250px;
+}
+
+.card-select h3 {
+  color: #000;
+  font-family: Roboto;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  transform: translateY(20px);
+}
+
+.card-select p {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transform: translateY(50px);
+  margin-bottom: 20px;
+}

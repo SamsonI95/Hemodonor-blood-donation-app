@@ -4,7 +4,6 @@ import Dropdown from "./Dropdown";
 import { Button } from "./Button";
 import "./NavBar.css";
 
-
 const NavBar = () => {
   //button logic
   const [button, setButton] = useState(true);
@@ -42,6 +41,7 @@ const NavBar = () => {
           </Link>
           <a href="#">Find Donor</a>
           <Link
+            to="#"
             onClick={() => handleDropdownClick()}
             className={selectedLink === "register" ? "selected" : ""}
           >

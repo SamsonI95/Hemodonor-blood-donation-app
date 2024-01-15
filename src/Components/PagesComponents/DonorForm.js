@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom'; // Import useHistory
 import { useEffect } from "react";
 import { Button } from "../Reusables/Button";
 import "./DonorForm.css";
@@ -20,6 +21,7 @@ const DonorForm = () => {
   const [year, setYear] = useState("");
   const [isFormFilled, setIsFormFilled] = useState(false); // New state variable
 
+  const Navigate = useNavigate(); // Get the history object
 
   useEffect(() => {
     setIsFormFilled(
@@ -57,41 +59,12 @@ const DonorForm = () => {
     setCheckboxChecked(!checkboxChecked);
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (isFormFilled) {
-      try {
-        const response = await fetch("http://localhost:5000/api/donor-form", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            // Include all your form data here
-            firstName,
-            lastName,
-            phoneNumber,
-            email,
-            address,
-            age,
-            bloodGroup,
-            state,
-            lga,
-            postalCode,
-            month,
-            year,
-          }),
-        });
-
-        if (response.ok) {
-          console.log("Form submitted successfully!");
-          // You may want to reset the form or redirect the user after a successful submission
-        } else {
-          console.error("Failed to submit form");
-        }
-      } catch (error) {
-        console.error("Error submitting form:", error);
-      }
+      console.log("Form submitted successfully!");
+      // Navigate to the OtpForm component
+      Navigate('/otp-form');
     } else {
       console.log("Please fill in all fields and accept the terms.");
     }
@@ -105,7 +78,7 @@ const DonorForm = () => {
       <div className="donor-header">
         <h3>Register as a donor</h3>
       </div>
-      <form className="donor-form" onSubmit={handleSubmit}>
+      <form className="donor-form">
         <div className="name">
           <h3>Full Name</h3>
           <input
@@ -220,6 +193,7 @@ const DonorForm = () => {
               type="submit"
               buttonStyle={!isFormFilled ? "btn--validate" : "btn--disable"}
               buttonSize=".btn--small"
+              onClick={handleSubmit}
               disabled={
                 !checkboxChecked ||
                 !firstName ||

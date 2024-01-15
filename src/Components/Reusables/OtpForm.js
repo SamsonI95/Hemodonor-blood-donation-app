@@ -6,74 +6,100 @@ import "./OtpForm.css";
 import { Button } from "./Button";
 
 const OtpForm = () => {
-  const [phone_number, setPhoneNumber] = useState('');
-  const [codeSent, setCodeSent] = useState(false);
-  const [code, setCode] = useState(['', '', '', '']);
-  const [verificationStatus, setVerificationStatus] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState("1234567890");
+  const [otp, setOtp] = useState(["1", "2", "3", "4"]); // Default OTP: "1234"
+  const [currentStep, setCurrentStep] = useState(1);
+  const [error, setError] = useState("");
 
-  const sendCode = () => {
-    // Simulate sending OTP to the user's phone number (for testing purposes)
-    // In a real-world scenario, this should be handled by a backend service
-    // and returned to the client for verification.
-    setCodeSent(true);
+  const [button] = useState(true);
+
+  const handlePhoneNumberSubmit = (e) => {
+    e.preventDefault();
+
+    // Simple phone number validation
+    if (/^\d{10}$/.test(phoneNumber)) {
+      console.log("Phone number is valid. Switching to OTP step.");
+      setCurrentStep(2);
+      setError("");
+    } else {
+      setError("Invalid phone number. Please enter a valid 10-digit number.");
+    }
   };
 
-  const verifyCode = () => {
-    const enteredCode = code.join('');
+  const handleOtpSubmit = (e) => {
+    e.preventDefault();
 
-    // Simulate verification (for testing purposes)
-    // In a real-world scenario, this should be handled by a backend service
-    // and returned to the client for verification.
-    if (enteredCode === '1234') {
-      setVerificationStatus('Verification successful!');
+    // Simple OTP validation (4 digits)
+    if (/^\d{4}$/.test(otp.join(""))) {
+      // You can perform further actions here, e.g., authentication
+      setError("");
+      console.log("Phone Number:", phoneNumber);
+      console.log("OTP:", otp.join(""));
     } else {
-      setVerificationStatus('Incorrect OTP. Please try again.');
+      setError("Invalid OTP. Please enter a valid 4-digit OTP.");
     }
   };
 
   return (
     <div className="form-container">
-      {!codeSent ? (
-        <form className="otp-form">
+      {currentStep === 1 ? (
+        <form
+          className="otp-form"
+          id="form-1"
+        >
           <h3>Registration</h3>
           <p>An OTP will be sent to your mobile number for verification</p>
           <input
+            id="phoneNumber"
             type="text"
-            value={phone_number}
+            value={phoneNumber}
             onChange={(e) => setPhoneNumber(e.target.value)}
             placeholder="Enter your mobile number"
             className="input"
           />
           <div className="button-reg">
-            <button onClick={sendCode}>Get OTP</button>
+            {button && (
+              <Button buttonStyle="btn--primary" buttonSize="btn--small" 
+              onClick={handlePhoneNumberSubmit}>
+                Get OTP
+              </Button>
+            )}
           </div>
         </form>
       ) : (
-        <form>
+        <form className="otp-form" id="form-2" onSubmit={handleOtpSubmit}>
           <h3>OTP Verification</h3>
           <p>An OTP has been sent to XXX XXX XXXX</p>
           <div className="otp-input-container">
-            {code.map((digit, index) => (
+            {otp.map((digit, index) => (
               <input
+              id="code"
                 key={index}
                 type="text"
                 value={digit}
-                onChange={(e) => {
-                  const newCode = [...code];
-                  newCode[index] = e.target.value;
-                  setCode(newCode);
-                }}
+                onChange={(e) =>
+                  setOtp((prevOtp) => {
+                    const newOtp = [...prevOtp];
+                    newOtp[index] = e.target.value;
+                    return newOtp;
+                  })
+                }
                 maxLength="1"
                 className="otp-input"
               />
             ))}
           </div>
           <div className="button-reg">
-            <button onClick={verifyCode}>Verify & Proceed</button>
+            {button && (
+              <Button buttonStyle="btn--primary" buttonSize="btn--medium">
+                Verify & Proceed
+              </Button>
+            )}
           </div>
-          <p>{verificationStatus}</p>
         </form>
       )}
+
+      {error && <p style={{ color: "red" }}>{error}</p>}
     </div>
   );
 };

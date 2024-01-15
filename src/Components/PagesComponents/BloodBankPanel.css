@@ -1,0 +1,51 @@
+.bank-card-container {
+  padding: 50px 55px;
+}
+
+.blood-bank-entry {
+  width: 1240px;
+  height: 276px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 4px 90px 2px rgba(209, 205, 205, 0.25);
+  border: 1px solid red;
+  margin-bottom: 50px;
+  padding: 42px 35px 0 32px;
+}
+
+.blood-bank-entry h3 {
+  color: #000;
+  font-family: Poppins;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  transform: translateY(10px);
+}
+
+.blood-bank-entry p {
+  color: rgba(0, 0, 0, 0.6);
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transform: translateY(30px);
+}
+
+
+.blood-bank-entry .cnam {
+    text-align: left;
+    width: 600px;
+    white-space: pre-wrap;
+    transform: translateY(40px);
+}
+
+.blood-bank-entry .cnum {
+    transform: translateY(6rem);
+}
+
+.bank-card-button {
+  float: right;
+}

@@ -1,15 +1,22 @@
+//App
 import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+
+//Styles
 import "./HeroSection.css";
-import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+
+//component
+import Carousel from "react-multi-carousel";
 import { Button } from "../Reusables/Button";
+import OverviewList from "./overviewList";
+
+//Data
 import { TesData } from "../Data Folder/TesData";
 import { PrcData } from "../Data Folder/PrcData";
 import { InData } from "../Data Folder/InData";
-import OverviewList from "./overviewList";
 import { overviewData } from "../Data Folder/overviewData";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const HeroSection = () => {
   const [button] = useState(true);

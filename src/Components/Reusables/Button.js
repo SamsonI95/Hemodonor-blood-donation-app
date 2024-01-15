@@ -2,8 +2,8 @@ import React from "react";
 import "./Button.css";
 import { Link } from "react-router-dom";
 
-const STYLES = ["btn--primary", "btn--noutline", "btn--secondary", "btn--validate"];
-const SIZES = ["btn--small", "btn--sl", "btn--medium", "btn--large", "btn--search", "btn--arrow"];
+const STYLES = ["btn--primary", "btn--noutline", "btn--secondary", "btn--validate", "btn--refresh"];
+const SIZES = ["btn--small", "btn--sl", "btn--medium", "btn--large", "btn--search", "btn--arrow", "btn--call"];
 
 export const Button = ({
   children,
