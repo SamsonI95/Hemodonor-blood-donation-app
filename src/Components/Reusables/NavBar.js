@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Dropdown from "./Dropdown";
+import Popup from "./Popup";
 import { Button } from "./Button";
 import "./NavBar.css";
 
@@ -15,9 +15,9 @@ const NavBar = () => {
   };
 
   //dropdown logic
-  const [dropdown, setDropdown] = useState(false);
-  const handleDropdownClick = () => {
-    setDropdown(!dropdown);
+  const [popup, setPopup] = useState(false);
+  const handlePopupClick = () => {
+    setPopup(!popup);
   };
 
   return (
@@ -42,7 +42,7 @@ const NavBar = () => {
           <a href="#">Find Donor</a>
           <Link
             to="#"
-            onClick={() => handleDropdownClick()}
+            onClick={() => handlePopupClick()}
             className={selectedLink === "register" ? "selected" : ""}
           >
             Register
@@ -57,7 +57,7 @@ const NavBar = () => {
           )}
         </div>
       </nav>
-      {dropdown && <Dropdown />} {/* Render the dropdown conditionally */}
+      {popup && <Popup />} {/* Render the dropdown conditionally */}
     </>
   );
 };

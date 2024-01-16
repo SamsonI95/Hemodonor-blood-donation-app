@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@700&family=Oswald:wght@600&family=Poppins&display=swap");
 
+.home-body {
+  overflow-x: hidden;
+}
+
 .main-donate-card {
   position: relative;
   left: 6%;
@@ -141,7 +145,7 @@ p {
   position: relative;
   font-family: Poppins;
   font-style: normal;
-  line-height: normal;
+  line-height: 1.5;
 }
 
 .donate-start-card1 h3 {
@@ -151,14 +155,15 @@ p {
 
 .donate-start-card1 p {
   width: 448px;
-  margin-top: 13%;
-  right: 99px;
+  margin-top: 15%;
+  right: 55px;
+  line-height: 1.5;
 }
 
 .donate-start-card1 Button {
   position: absolute;
-  right: 27%;
-  margin-top: 20%;
+  right: 19.5%;
+  margin-top: 26%;
 }
 
 .product-card1-container {

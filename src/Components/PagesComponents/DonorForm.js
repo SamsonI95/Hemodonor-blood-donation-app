@@ -64,7 +64,7 @@ const DonorForm = () => {
     if (isFormFilled) {
       console.log("Form submitted successfully!");
       // Navigate to the OtpForm component
-      Navigate('/otp-form');
+      Navigate('/home');
     } else {
       console.log("Please fill in all fields and accept the terms.");
     }

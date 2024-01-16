@@ -1,4 +1,16 @@
+.term-content ol {
+  list-style-type: none;
+}
+
 .term-content ol ul li {
-    list-style-type: circle;
-    margin-block-start: 10px;
+  list-style-type: disc;
+  margin-block-start: 10px;
+  color: #797474;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height:1.5;
+  margin-left: 20px;
+  margin-bottom: 15px;
 }

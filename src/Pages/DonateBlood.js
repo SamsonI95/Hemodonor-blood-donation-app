@@ -1,8 +1,8 @@
 import React from 'react'
-import DonorSelect from '../Components/PagesComponents/DonorSelect';
+import OtpForm from '../Components/Reusables/OtpForm';
 
 function DonateBlood() {
-  return <DonorSelect />
+  return <OtpForm />
 }
 
 export default DonateBlood;

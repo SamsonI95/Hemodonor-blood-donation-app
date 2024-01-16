@@ -3,6 +3,10 @@
   counter-reset: step-counter; /* Reset the counter for numbering */
 }
 
+.overview-list ul {
+  list-style-type: none;
+}
+
 .overview-item {
     margin-bottom: 20px;
     /*margin-left: 25px;*/

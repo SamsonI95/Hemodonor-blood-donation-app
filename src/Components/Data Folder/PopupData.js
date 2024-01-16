@@ -1,4 +1,4 @@
-export  const DropdownData = [
+export  const PopupData = [
     {
         item: "Register as a Donor",
         path: "./donor-form",

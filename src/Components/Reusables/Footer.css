@@ -89,6 +89,18 @@ footer {
     transform: translateX(80px);
 }
 
+.content-1 ul {
+  list-style-type: none;
+}
+
+.content-2 ul {
+  list-style-type: none;
+}
+
+.content-3 ul {
+  list-style-type: none;
+}
+
 .content-1 ul  li {
     margin-bottom: 20px;
 }

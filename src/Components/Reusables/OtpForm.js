@@ -1,11 +1,14 @@
 //App
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./OtpForm.css";
 
 //Components
 import { Button } from "./Button";
 
 const OtpForm = () => {
+  const navigate = useNavigate();
+
   const [phoneNumber, setPhoneNumber] = useState("1234567890");
   const [otp, setOtp] = useState(["1", "2", "3", "4"]); // Default OTP: "1234"
   const [currentStep, setCurrentStep] = useState(1);
@@ -35,6 +38,9 @@ const OtpForm = () => {
       setError("");
       console.log("Phone Number:", phoneNumber);
       console.log("OTP:", otp.join(""));
+
+       // Navigate to RecipientDetails component
+       navigate("/recipient-details");
     } else {
       setError("Invalid OTP. Please enter a valid 4-digit OTP.");
     }
@@ -43,10 +49,7 @@ const OtpForm = () => {
   return (
     <div className="form-container">
       {currentStep === 1 ? (
-        <form
-          className="otp-form"
-          id="form-1"
-        >
+        <form className="otp-form" id="form-1">
           <h3>Registration</h3>
           <p>An OTP will be sent to your mobile number for verification</p>
           <input
@@ -59,8 +62,11 @@ const OtpForm = () => {
           />
           <div className="button-reg">
             {button && (
-              <Button buttonStyle="btn--primary" buttonSize="btn--small" 
-              onClick={handlePhoneNumberSubmit}>
+              <Button
+                buttonStyle="btn--primary"
+                buttonSize="btn--small"
+                onClick={handlePhoneNumberSubmit}
+              >
                 Get OTP
               </Button>
             )}
@@ -73,7 +79,7 @@ const OtpForm = () => {
           <div className="otp-input-container">
             {otp.map((digit, index) => (
               <input
-              id="code"
+                id="code"
                 key={index}
                 type="text"
                 value={digit}
@@ -91,7 +97,7 @@ const OtpForm = () => {
           </div>
           <div className="button-reg">
             {button && (
-              <Button buttonStyle="btn--primary" buttonSize="btn--medium">
+              <Button buttonStyle="btn--primary" buttonSize="btn--medium" onClick={handleOtpSubmit}>
                 Verify & Proceed
               </Button>
             )}

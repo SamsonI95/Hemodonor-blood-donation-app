@@ -2,8 +2,24 @@ import React from "react";
 import "./Button.css";
 import { Link } from "react-router-dom";
 
-const STYLES = ["btn--primary", "btn--noutline", "btn--secondary", "btn--validate", "btn--refresh"];
-const SIZES = ["btn--small", "btn--sl", "btn--medium", "btn--large", "btn--search", "btn--arrow", "btn--call"];
+const STYLES = [
+  "btn--primary",
+  "btn--noutline",
+  "btn--secondary",
+  "btn--validate",
+  "btn--validate2",
+  "btn--refresh",
+];
+const SIZES = [
+  "btn--small",
+  "btn--sl",
+  "btn--medium",
+  "btn--xmedium",
+  "btn--large",
+  "btn--search",
+  "btn--arrow",
+  "btn--call",
+];
 
 export const Button = ({
   children,
@@ -15,19 +31,17 @@ export const Button = ({
   const checkButtonStyle = STYLES.includes(buttonStyle)
     ? buttonStyle
     : STYLES[0];
-  const checkButtonSize = SIZES.includes(buttonSize) 
-    ? buttonSize 
-    : SIZES[0];
+  const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
 
-    return(
-        <Link to='/#' className='btn-mobile'>
-            <button
-            className={`btn ${checkButtonStyle} ${checkButtonSize}`}
-            onClick={onClick}
-            type={type}
-            >
-                {children}
-            </button>
-        </Link>
-    )
+  return (
+    <Link to="/#" className="btn-mobile">
+      <button
+        className={`btn ${checkButtonStyle} ${checkButtonSize}`}
+        onClick={onClick}
+        type={type}
+      >
+        {children}
+      </button>
+    </Link>
+  );
 };
