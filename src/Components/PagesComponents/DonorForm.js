@@ -191,7 +191,7 @@ const DonorForm = () => {
           {button && (
             <Button
               type="submit"
-              buttonStyle={!isFormFilled ? "btn--validate" : "btn--disable"}
+              buttonStyle={!isFormFilled ? "btn--validate" : "btn--disable btn--enabled"}
               buttonSize=".btn--small"
               onClick={handleSubmit}
               disabled={

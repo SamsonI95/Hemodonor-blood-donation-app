@@ -283,3 +283,11 @@
     float: right;
     transform: translateY(-80px) translateX(-70px);
 }
+
+.btn--validate {
+  cursor: not-allowed;
+}
+
+.btn--enabled {
+  cursor: pointer;
+}

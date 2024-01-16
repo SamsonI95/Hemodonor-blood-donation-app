@@ -1,6 +1,7 @@
 //App
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 //Component
 import { Button } from "../Reusables/Button";
@@ -17,29 +18,40 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 //Style
 import "./RecipientDetails.css";
 
+//Component Logic
 const RecipientDetails = () => {
   const [button] = useState(true);
+  const [selectedBloodGroup, setSelectedBloodGroup] = useState(null);
+  const [selectedState, setSelectedState] = useState(null);
+  const [selectedLGA, setSelectedLGA] = useState(null);
+  const [isDataFilled, setIsDataFilled] = useState(false);
 
-  const renderOption = (option) => {
-    return (
-      <div key={option.id}>
-        <h3>{option.label}</h3>
-        <p>{option.value}</p>
-      </div>
-    );
+  const buttonStyle = isDataFilled
+    ? "btn--validate2 btn--enabled"
+    : "btn--validate2 btn--disabled";
+
+  useEffect(() => {
+    setIsDataFilled(selectedBloodGroup && (selectedState || selectedLGA));
+  }, [selectedBloodGroup, selectedState, selectedLGA]);
+
+  const handleBloodGroupSelect = (bgroup) => {
+    setSelectedBloodGroup(bgroup);
   };
 
-  const renderStateOption = (state) => {
-    return (
-      <div key={state.name}>
-        <h3>{state.name}</h3>
-        <ul>
-          {state.localGovts.map((lg, index) => (
-            <li key={index}>{lg}</li>
-          ))}
-        </ul>
-      </div>
-    );
+  const handleStateSelect = (state) => {
+    setSelectedState(state);
+  };
+
+  const handleLGASubmit = (lga) => {
+    setSelectedLGA(lga);
+  };
+
+  const handleStateChange = (state) => {
+    setSelectedState(state.name);
+    // For simplicity, using a predefined set of LGAs for each state
+    const defaultLGAs = ["Select State First"];
+    const lgas = state.localGovts || defaultLGAs;
+    setSelectedLGA(lgas[0]); // Select the first LGA by default
   };
 
   const navigate = useNavigate();
@@ -47,12 +59,12 @@ const RecipientDetails = () => {
   const handleRecipientSubmit = (e) => {
     e.preventDefault();
 
-    console.log("Blood Group:", BloodGroup);
-    console.log("State:", states);
+    console.log("Blood Group:", selectedBloodGroup);
+    console.log("State:", selectedState);
+    console.log("Local Govt:", selectedLGA);
 
-    navigate("/donor-select")
-
-  }
+    navigate("/donor-select");
+  };
 
   return (
     <>
@@ -72,7 +84,7 @@ const RecipientDetails = () => {
               width="200px"
               height="45px"
               data={BloodGroup}
-              renderOption={renderOption}
+              onSelect={handleBloodGroupSelect}
             />
           </div>
           <div className="bg-button-1">
@@ -90,7 +102,7 @@ const RecipientDetails = () => {
               width="200px"
               height="45px"
               data={states}
-              renderOptions={renderStateOption}
+              onSelect={handleStateSelect}
             />
           </div>
           <div className="bg-select-3">
@@ -99,13 +111,23 @@ const RecipientDetails = () => {
               title="Select Local Govt"
               width="200px"
               height="45px"
-              data={states}
-              renderOptions={renderStateOption}
+              data={
+                selectedState
+                  ? states.find((s) => s.name === selectedState)
+                      ?.localGovts || ["Select State First"]
+                  : ["Select State First"]
+              }
+              onSelect={handleLGASubmit}
             />
           </div>
           <div className="bg-button-2">
             {button && (
-              <Button buttonStyle="btn--validate2" buttonSize="btn--medium" onClick={handleRecipientSubmit}>
+              <Button
+                buttonStyle={buttonStyle}
+                buttonSize="btn--medium"
+                onClick={handleRecipientSubmit}
+                disabled={!isDataFilled}
+              >
                 Proceed
                 <FontAwesomeIcon icon={faChevronRight} />
               </Button>
