@@ -1,11 +1,10 @@
 //App
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
 
 //Component
 import { Button } from "../Reusables/Button";
-import Accordion from "../Reusables/Accordion";
+import Select from "../Reusables/SelectOptionsModel";
 
 //Data
 import { BloodGroup } from "../Data Folder/BloodGroupData";
@@ -30,30 +29,6 @@ const RecipientDetails = () => {
     ? "btn--validate2 btn--enabled"
     : "btn--validate2 btn--disabled";
 
-  useEffect(() => {
-    setIsDataFilled(selectedBloodGroup && (selectedState || selectedLGA));
-  }, [selectedBloodGroup, selectedState, selectedLGA]);
-
-  const handleBloodGroupSelect = (bgroup) => {
-    setSelectedBloodGroup(bgroup);
-  };
-
-  const handleStateSelect = (state) => {
-    setSelectedState(state);
-  };
-
-  const handleLGASubmit = (lga) => {
-    setSelectedLGA(lga);
-  };
-
-  const handleStateChange = (state) => {
-    setSelectedState(state.name);
-    // For simplicity, using a predefined set of LGAs for each state
-    const defaultLGAs = ["Select State First"];
-    const lgas = state.localGovts || defaultLGAs;
-    setSelectedLGA(lgas[0]); // Select the first LGA by default
-  };
-
   const navigate = useNavigate();
 
   const handleRecipientSubmit = (e) => {
@@ -61,9 +36,25 @@ const RecipientDetails = () => {
 
     console.log("Blood Group:", selectedBloodGroup);
     console.log("State:", selectedState);
-    console.log("Local Govt:", selectedLGA);
+    console.log("Local Govt:", selectedState?.localGovts);
 
     navigate("/donor-select");
+  };
+
+  const handleStateSelect = (selectedState) => {
+    console.log("Selected State:", selectedState);
+    setSelectedState(selectedState);
+    setSelectedLGA();
+  };
+
+  const handleLocalGovtSelect = (selectedLGA) => {
+    console.log("Selected Local Government:", selectedLGA);
+    setSelectedLGA(selectedLGA); // Corrected from selectedLGA to selectedLocalGovt
+  };
+
+  const handleBloodGroupSelect = (selectedBloodGroup) => {
+    console.log("Selected Blood Group:", selectedBloodGroup);
+    setSelectedBloodGroup(selectedBloodGroup);
   };
 
   return (
@@ -79,11 +70,9 @@ const RecipientDetails = () => {
           <div className="bg-select">
             <h3>Recipient Details</h3>
             <p>Blood Group</p>
-            <Accordion
-              title="Select Blood Group"
-              width="200px"
-              height="45px"
-              data={BloodGroup}
+            <Select
+              label=""
+              options={BloodGroup.map((group) => group.bgroup)}
               onSelect={handleBloodGroupSelect}
             />
           </div>
@@ -96,28 +85,19 @@ const RecipientDetails = () => {
           </div>
           <h4>OR</h4>
           <div className="bg-select-2">
-            <p>State</p>
-            <Accordion
-              title="State"
-              width="200px"
-              height="45px"
-              data={states}
+            <p>Select State</p>
+            <Select
+              label=""
+              options={states.map((state) => state.name)}
               onSelect={handleStateSelect}
             />
           </div>
           <div className="bg-select-3">
-            <p>Local Govt</p>
-            <Accordion
-              title="Select Local Govt"
-              width="200px"
-              height="45px"
-              data={
-                selectedState
-                  ? states.find((s) => s.name === selectedState)
-                      ?.localGovts || ["Select State First"]
-                  : ["Select State First"]
-              }
-              onSelect={handleLGASubmit}
+            <h3>Select Local Government</h3>
+            <Select
+              label=""
+              options={selectedLGA ? selectedLGA.map((lga) => lga.localGovts) : []}
+              onSelect={handleLocalGovtSelect}
             />
           </div>
           <div className="bg-button-2">
