@@ -1,0 +1,127 @@
+.profile-main-container {
+  display: flex;
+  padding: 50px 55px;
+  margin-right: 200px;
+}
+
+.user-detail {
+  flex: 1;
+
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.user-edit-profile {
+  width: 722px;
+  height: 222px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0px 4px 100px 3px rgba(191, 219, 247, 0.25);
+  padding: 25px 32px;
+}
+
+.user-image {
+  width: 164px;
+  height: 164px;
+  background-color: rgba(191, 219, 247, 1);
+  border-radius: 10px;
+}
+
+.user-image img {
+  border-radius: 10px;
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+
+.user-name {
+  position: relative;
+  left: 12rem;
+  bottom: 40px;
+}
+
+.user-name h3 {
+  color: #000;
+  font-family: inter;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+
+.user-button {
+  float: right;
+  position: relative;
+  bottom: 5rem;
+}
+
+.user-button Button {
+  transform: translateY(-25px);
+}
+
+.user-icon {
+  transform: translateX(-30px) translateY(10px);
+}
+
+.user-about {
+  width: 650px;
+  height: 470px;
+  border-radius: 20px;
+  background: #bfdbf7;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.user-about h3 {
+  color: #000;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  transform: translateY(-12rem) translateX(10rem);
+}
+
+.user-about ul {
+  list-style-type: none;
+  color: #000;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: relative;
+  top: 25px;
+}
+
+.user-about ul li {
+  margin-bottom: 20px;
+}
+
+.user-requied {
+  transform: translateX(-8rem);
+}
+
+.dates {
+  position: relative;
+  top: -6rem;
+}
+
+.user-calender {
+  transform: translateX(-27rem) translateY(25rem);
+  width: 341px;
+  height: 354px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0px 4px 100px 2px rgba(164, 162, 162, 0.25);
+}
+
+.user-calender img {
+    width: 280px;
+    height: 286px; 
+    position: relative;
+    top: 30px;
+    left: 30px;
+}

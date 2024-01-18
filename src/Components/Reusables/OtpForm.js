@@ -9,7 +9,7 @@ import { Button } from "./Button";
 const OtpForm = () => {
   const navigate = useNavigate();
 
-  const [phoneNumber, setPhoneNumber] = useState("1234567890");
+  const [phoneNumber, setPhoneNumber] = useState("0901234567");
   const [otp, setOtp] = useState(["1", "2", "3", "4"]); // Default OTP: "1234"
   const [currentStep, setCurrentStep] = useState(1);
   const [error, setError] = useState("");

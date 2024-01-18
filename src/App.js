@@ -13,29 +13,36 @@ import DonorForm from "./Components/PagesComponents/DonorForm";
 import OrgForm from "./Components/PagesComponents/OrgForm";
 import OtpForm from "./Components/Reusables/OtpForm";
 import RecipientDetails from "./Components/PagesComponents/RecipientDetails";
+import Profile from "./Components/PagesComponents/Profile";
+import EditPrrofile from "./Components/PagesComponents/EditProfile";
 
 //Components
 import NavBar from "./Components/Reusables/NavBar";
 import Footer from "./Components/Reusables/Footer";
 import HideFooter from "./Components/Reusables/HideFooter";
 
+
 function App() {
+  
   return (
     <>
       <Router>
         <NavBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home" exact element={<Home />} />
-          <Route path="/donate-blood" element={<DonateBlood />} />
-          <Route path="/donor-select" element={<DonorSelect />} />
-          <Route path="/donor-form" element={<DonorForm />} />
-          <Route path="/recipient-details" element={<RecipientDetails />} />
-          <Route path="/org-form" element={<OrgForm />} />
-          <Route path="/otp-form" element={<OtpForm />} />
-          <Route path="/terms" element={<TermsPage />} />
-          <Route path="/privacy" element={<PrivacyStatement />} />
-        </Routes>
+        
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/home" exact element={<Home />} />
+            <Route path="/donate-blood" element={<DonateBlood />} />
+            <Route path="/donor-select" element={<DonorSelect />} />
+            <Route path="/donor-form" element={<DonorForm />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/edit-profile" element={<EditPrrofile />} />
+            <Route path="/recipient-details" element={<RecipientDetails />} />
+            <Route path="/org-form" element={<OrgForm />} />
+            <Route path="/otp-form" element={<OtpForm />} />
+            <Route path="/terms" element={<TermsPage />} />
+            <Route path="/privacy" element={<PrivacyStatement />} />
+          </Routes>
         <HideFooter>
           <Footer />
         </HideFooter>

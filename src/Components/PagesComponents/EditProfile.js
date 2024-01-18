@@ -12,7 +12,7 @@ import { Button } from "../Reusables/Button";
 //Style
 import "./DonorForm.css";
 
-const DonorForm = () => {
+const EditPrrofile = () => {
   //validation logic
   const [checkboxChecked, setCheckboxChecked] = useState(false);
   const [firstName, setFirstName] = useState("");
@@ -85,7 +85,7 @@ const DonorForm = () => {
     <>
       <div className="donor-container">
         <div className="donor-header">
-          <h3>Register as a donor</h3>
+          <h3>Edit Profile</h3>
         </div>
         <form className="donor-form">
           <div className="name">
@@ -231,4 +231,4 @@ const DonorForm = () => {
   );
 };
 
-export default DonorForm;
+export default EditPrrofile;

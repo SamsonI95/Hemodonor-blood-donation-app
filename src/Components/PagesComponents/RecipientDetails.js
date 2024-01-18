@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 
 //Component
 import { Button } from "../Reusables/Button";
-import Select from "../Reusables/SelectOptionsModel";
 
 //Data
 import { BloodGroup } from "../Data Folder/BloodGroupData";
@@ -20,9 +19,6 @@ import "./RecipientDetails.css";
 //Component Logic
 const RecipientDetails = () => {
   const [button] = useState(true);
-  const [selectedBloodGroup, setSelectedBloodGroup] = useState(null);
-  const [selectedState, setSelectedState] = useState(null);
-  const [selectedLGA, setSelectedLGA] = useState(null);
   const [isDataFilled, setIsDataFilled] = useState(false);
 
   const buttonStyle = isDataFilled
@@ -34,28 +30,16 @@ const RecipientDetails = () => {
   const handleRecipientSubmit = (e) => {
     e.preventDefault();
 
-    console.log("Blood Group:", selectedBloodGroup);
-    console.log("State:", selectedState);
-    console.log("Local Govt:", selectedState?.localGovts);
-
     navigate("/donor-select");
   };
 
-  const handleStateSelect = (selectedState) => {
-    console.log("Selected State:", selectedState);
-    setSelectedState(selectedState);
-    setSelectedLGA();
-  };
+ const [state, setState] = useState()
+ const [lga, setLga] = useState([])
 
-  const handleLocalGovtSelect = (selectedLGA) => {
-    console.log("Selected Local Government:", selectedLGA);
-    setSelectedLGA(selectedLGA); // Corrected from selectedLGA to selectedLocalGovt
-  };
-
-  const handleBloodGroupSelect = (selectedBloodGroup) => {
-    console.log("Selected Blood Group:", selectedBloodGroup);
-    setSelectedBloodGroup(selectedBloodGroup);
-  };
+ function handleState(event) {
+    setState(event.target.value)
+    setLga(states.find(state => state.name === event.target.value).localGovts)
+ }
 
   return (
     <>
@@ -70,11 +54,14 @@ const RecipientDetails = () => {
           <div className="bg-select">
             <h3>Recipient Details</h3>
             <p>Blood Group</p>
-            <Select
-              label=""
-              options={BloodGroup.map((group) => group.bgroup)}
-              onSelect={handleBloodGroupSelect}
-            />
+            <select className="form-control" id="bg-select">
+                <option>--Select Bloodgroup--</option>
+                {BloodGroup.map((bg, index) => (
+                  <option key={index} value={bg}>
+                    {bg.name}
+                  </option>
+                ))}
+            </select>
           </div>
           <div className="bg-button-1">
             {button && (
@@ -85,20 +72,26 @@ const RecipientDetails = () => {
           </div>
           <h4>OR</h4>
           <div className="bg-select-2">
-            <p>Select State</p>
-            <Select
-              label=""
-              options={states.map((state) => state.name)}
-              onSelect={handleStateSelect}
-            />
+            <p>State</p>
+            <select className="form-control" id="state-select" onChange={handleState}>
+                <option>--Select State--</option>
+                {states.map((state, index) => (
+                  <option key={index} value={state.name}>
+                    {state.name}
+                  </option>
+                ))}
+            </select>
           </div>
           <div className="bg-select-3">
-            <h3>Select Local Government</h3>
-            <Select
-              label=""
-              options={selectedLGA ? selectedLGA.map((lga) => lga.localGovts) : []}
-              onSelect={handleLocalGovtSelect}
-            />
+            <p>Local Govt</p>
+            <select className="form-control" id="lga-select">
+                <option>--Select LocalGovt--</option>
+                {lga.map((state, index) => (
+                  <option key={index} value={state.lga}>
+                    {state.lga}
+                  </option>
+                ))}
+            </select>
           </div>
           <div className="bg-button-2">
             {button && (

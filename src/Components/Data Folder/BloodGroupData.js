@@ -1,23 +1,23 @@
 export const BloodGroup = [ 
     {
-        bgroup: "A+",
+        name: "A+",
     },
     {
-        bgroup: "A-",
+        name: "A-",
     },
     {
-        bgroup: "B+",
+        name: "B+",
     },
     {
-        bgroup: "B+",
+        name: "B+",
     },
     {
-        bgroup: "AB+",
+        name: "AB+",
     },
     {
-        bgroup: "O+",
+        name: "O+",
     },
     {
-        bgroup: "O+",
+        name: "O+",
     }
  ]
