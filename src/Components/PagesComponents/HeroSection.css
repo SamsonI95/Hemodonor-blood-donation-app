@@ -400,8 +400,8 @@ p {
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
   color: #121212;
-  border: 1px solid rgba(249, 194, 46, 1);
-  background: rgba(249, 194, 46, 1);
+  border: 1px solid #EE4B2B;
+  background: #EE4B2B;
   border-bottom: none;
   padding-top: 25px;
 }

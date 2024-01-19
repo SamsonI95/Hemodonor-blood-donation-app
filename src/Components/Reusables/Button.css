@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@700&family=Oswald:wght@600&family=Poppins&display=swap");
 
 :root {
-  --primary-button: #880808;
+  --primary-button: #EE4B2B;
   --validate-button: #fff;
 }
 
@@ -14,7 +14,6 @@
   align-items: center;
   justify-content: center;
   font-family: "Poppins", sans-serif;
-  color: #fff;
   transition: all 0.5s;
 }
 
