@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@700&family=Oswald:wght@600&family=Poppins&display=swap");
 
 :root {
-  --primary-button: rgba(249, 194, 46, 1);
+  --primary-button: #EE4B2B;
   --validate-button: #fff;
 }
 
