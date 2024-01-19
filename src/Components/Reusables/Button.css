@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@700&family=Oswald:wght@600&family=Poppins&display=swap");
 
 :root {
-  --primary-button: #EE4B2B;
+  --primary-button: #880808;
   --validate-button: #fff;
 }
 
@@ -14,6 +14,7 @@
   align-items: center;
   justify-content: center;
   font-family: "Poppins", sans-serif;
+  color: #fff;
 }
 
 .btn--primary {
@@ -22,9 +23,9 @@
 }
 
 .btn--primary:hover {
-  background-color: black;
+  background-color: #c4d9f3;
   color: var(--primary-button);
-  border: 1px solid black;
+  border: 1px solid #c4d9f3;
 }
 
 .btn--small {
