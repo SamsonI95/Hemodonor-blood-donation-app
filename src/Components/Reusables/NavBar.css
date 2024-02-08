@@ -57,3 +57,9 @@ nav {
   transform: translateX(10.3rem) translateY(-45%);
   cursor: pointer;
 }
+
+@media (min-width: 1600px) {
+  .nav-menu-items {
+    transform: translateX(-40px);
+  }
+}
