@@ -11,7 +11,7 @@ nav {
   display: flex;
   align-items: center;
   gap: 37px;
-  transform: translateX(-80px);
+  transform: translateX(-60px);
 }
 
 .nav-menu-items a {
