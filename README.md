@@ -1,6 +1,6 @@
-# Link to the static site
+# domain name:
 
-https://samsoni95.github.io/Hemodonor-blood-donation-app/
+ hemdonor.com.ng
 
 # Getting Started with Create React App
 

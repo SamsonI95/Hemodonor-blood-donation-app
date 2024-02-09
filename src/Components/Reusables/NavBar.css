@@ -13,6 +13,9 @@ padding:  30px;
   margin-right: 15rem;
   gap: 2rem;
   margin-top: 13px;
+  align-items: center;
+  gap: 37px;
+  transform: translateX(-60px);
 }
 
 .nav-menu-items a {
