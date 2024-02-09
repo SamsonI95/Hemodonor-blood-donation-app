@@ -1,18 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@700&family=Oswald:wght@600&family=Poppins&display=swap");
 
-.home-body {
-  overflow-x: hidden;
-}
-
 .main-donate-card {
   position: relative;
-  left: 6%;
   display: block;
   align-items: center;
   justify-content: center;
   margin-top: 44px;
   padding: 44px 50px 0 50px;
-  width: 1200px;
+  width: 1339px;
   height: 557px;
   border-radius: 20px;
   background: linear-gradient(
@@ -30,8 +25,8 @@
   font-weight: 500;
   line-height: normal;
   text-transform: capitalize;
-  padding-top: 105px;
-  padding-left: 100px;
+  margin-top: 105px;
+  text-align: center;
 }
 
 .main-donate-card h4 {
@@ -41,9 +36,8 @@
 }
 
 .main-donate-card p {
-  padding-top: 34px;
+  margin-top: 34px;
   position: relative;
-  left: 14%;
   width: 823px;
   justify-content: center;
   text-align: center;
@@ -51,25 +45,23 @@
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: 1.3;
   text-transform: capitalize;
 }
 
 .main-donate-card Button {
   position: relative;
   top: 52px;
-  left: 45%;
+  left: 44%;
 }
 
 .donor-search-container {
-  width: 1000px;
+  width: 1238px;
   height: 120px;
   background: #343434;
   /*box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);*/
   position: relative;
   top: 60px;
-  left: 5%;
-  overflow: hidden;
 }
 
 .donor-search-container p {
@@ -78,9 +70,9 @@
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  padding-right: 10%;
   position: relative;
-  bottom: 15px;
+  top: 10px;
+  left: 20%;
 }
 
 .donor-search-container .search-bar {
@@ -91,8 +83,8 @@
   width: 430px;
   height: 40px;
   position: relative;
-  margin-top: 2px;
-  left: 25%;
+  transform: translateY(2rem);
+  left: 15%;
   padding-left: 13%;
   border-top-left-radius: 10px;
   background: #d9d9d9;
@@ -109,8 +101,8 @@
 
 .donor-search-container .search-bar Button {
   position: absolute;
-  top: 60px;
-  left: 68%;
+  top: 55px;
+  left: 60%;
 }
 
 .sponsors-container {
@@ -400,8 +392,8 @@ p {
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
   color: #121212;
-  border: 1px solid #EE4B2B;
-  background: #EE4B2B;
+  border: 1px solid #ee4b2b;
+  background: #ee4b2b;
   border-bottom: none;
   padding-top: 25px;
 }
@@ -452,9 +444,8 @@ p {
 
 .t-carousel-container {
   /*border: 1px solid orange;*/
-  padding: 0 50px;
-  transform: translateX(-45px);
   cursor: pointer;
+  height: 400px;
 }
 
 .testimony-header h3 {
@@ -477,6 +468,10 @@ p {
   line-height: normal;
   text-align: center;
   margin-bottom: 40px;
+}
+
+.tescard11 {
+  transform: translateY(33px);
 }
 
 .tescard11 h3,
@@ -513,7 +508,7 @@ p {
 }
 
 .item-2 p {
-  transform: translateY(65px);
+  transform: translateY(55px);
 }
 
 .item-2 {
@@ -545,8 +540,12 @@ p {
   transform: translateX(-15px) translateY(50px);
 }
 
-.custom-dot-list-style {
-  transform: translateX(50px);
+
+.testimony-carousel-content  .react-multi-carousel-dot-list {
+  position: absolute;
+  transform: translateX(65px);
+  left: 40rem;
+  right: 60rem;
 }
 
 .bottom-card-container {
@@ -597,4 +596,80 @@ p {
 
 .bottom-card-image img {
   border-radius: 20px;
+}
+
+@media (min-width: 1600px) {
+  .home-body {
+    width: 90%;
+  }
+
+  .donor-search-container p {
+    left: -2%;
+  }
+
+  .donate-start-card1 p {
+    transform: translateX(-1rem);
+  }
+
+  .donate-start-card1 button {
+    transform: translateX(-6rem) translateY(-5rem);
+  }
+
+  .dis-content-card img {
+    transform: translateX(-4rem);
+  }
+
+  .dis-content-card ul {
+    transform: translateX(-13rem);
+  }
+
+  .discovery-container button {
+    transform: translateX(3.5rem);
+  }
+
+  .overview-content-card .blue-rect {
+    transform: translateX(-6rem);
+  }
+
+  .overview-content-card .red-rect {
+    left: 3.1rem;
+  }
+
+  .overview-list {
+    position: relative;
+    right: 15rem;
+  }
+
+  .incentive-card-header {
+    position: relative;
+    left: 15px;
+  }
+
+  .custom-dot-list-style {
+    position: relative;
+  }
+
+  .bottom-card-text {
+    left: 12rem;
+  }
+
+  .bottom-card-text p {
+    position: relative;
+    left: 2.5rem;
+  }
+
+  .bottom-card-button {
+    position: relative;
+    left: 2.5rem;
+  }
+
+  .bottom-card-image {
+    position: relative;
+    right: 10rem;
+  }
+
+  .item-1-3 {
+    transform: translateX(50px);
+    margin-left: 40px;
+  }
 }

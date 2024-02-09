@@ -177,7 +177,7 @@ const HeroSection = () => {
                 responsive={responsive}
                 containerClass="t-carousel-container"
                 itemClass="tescard11"
-                dotListClass="custom-dot-list-style"
+                dotListClass="react-multi-carousel-dot-list"
               >
                 {TesData.map((d) => (
                   <>

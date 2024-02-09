@@ -43,7 +43,7 @@ export const Carousel = () => {
           <FontAwesomeIcon icon={faChevronRight} />
         </button>
       </div>
-      <div className="caousel-inidcators">
+      <div className="carousel-inidcators">
           <span className="material-symbols-outlined">radio_button_unchecked</span>
           <span className="material-symbols-outlined">radio_button_unchecked</span>
           <span className="material-symbols-outlined">radio_button_unchecked</span>

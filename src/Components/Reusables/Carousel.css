@@ -32,13 +32,13 @@
     right: 50px;
 }
 
-.caousel-inidcators {
+.carousel-inidcators {
     text-align: center;
     transform: translateY(-35px);
 }
 
-.caousel-inidcators span {
+.carousel-inidcators span {
     overflow: hidden;
-    margin: 0 5px;
+    
     
 }
