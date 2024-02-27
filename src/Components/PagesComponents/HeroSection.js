@@ -110,12 +110,13 @@ const HeroSection = () => {
               <li>Donate: by Giving the gift of life</li>
               <li>Track impact to See your contribution in real-time</li>
             </ul>
-          </div>
+            
           {button && (
             <Button buttonStyle="btn--primary" buttonSize="btn--small">
               Get Started
             </Button>
           )}
+          </div>
         </div>
         <div className="overview-container">
           <div className="overview-header">Process Overview</div>
