@@ -57,6 +57,7 @@ footer {
   letter-spacing: -0.3px;
   width: 168px;
   margin-bottom: 30px;
+  transform: translateX(-3.1rem);
 }
 
 .newsletter input {
