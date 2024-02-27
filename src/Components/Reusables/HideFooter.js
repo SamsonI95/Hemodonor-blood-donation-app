@@ -6,7 +6,7 @@ const HideFooter = ({ children }) => {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.pathname === "/home" || location.pathname === "/terms" || location.pathname === "/privacy") {
+    if (location.pathname === "/home" || location.pathname === "/" || location.pathname === "/terms" || location.pathname === "/privacy") {
       setShowFooter(true);
     } else {
       setShowFooter(false);
