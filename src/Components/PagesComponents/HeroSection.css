@@ -126,7 +126,12 @@
 .donate-start-card1 img {
   border-radius: 10px;
   position: relative;
-  left: 10%;
+  /*left: 10%;*/
+}
+
+.donate-start-card1-text {
+  position: relative;
+  right: 2rem;
 }
 
 .donate-start-card1 h3,
@@ -142,20 +147,18 @@ p {
 
 .donate-start-card1 h3 {
   margin-top: 8%;
-  left: 15%;
 }
 
 .donate-start-card1 p {
   width: 448px;
   margin-top: 15%;
-  right: 55px;
   line-height: 1.5;
 }
 
 .donate-start-card1 Button {
-  position: absolute;
-  right: 19.5%;
-  margin-top: 26%;
+  /*position: absolute;
+  right: 19.5%;*/
+  margin-top: 15%;
 }
 
 .product-card1-container {
@@ -219,7 +222,7 @@ p {
 }
 
 .discovery-container {
-  margin-top: 50px;
+  margin-top: 10rem;
 }
 
 .dis-header {
@@ -237,13 +240,16 @@ p {
 
 .dis-content-card {
   display: flex;
-  margin-top: 40px;
+  transform: translateY(40px);
+  margin: 4rem auto;
 }
 
 .dis-content-card img {
   border-radius: 10px;
   width: 450px;
   height: 350px;
+  position: relative;
+  left: 3rem;
 }
 
 .dis-content-card ul {
@@ -273,7 +279,7 @@ p {
 }
 
 .overview-container {
-  margin-top: 50px;
+  margin-top: 10rem;
   margin-bottom: 30px;
   height: 100%;
   align-items: center;
@@ -295,7 +301,7 @@ p {
 
 .overview-content-card {
   display: flex;
-  margin-top: 40px;
+  margin-top: 5rem;
 }
 
 .overview-content-card img {
@@ -308,13 +314,25 @@ p {
   margin-top: 20px;
 }
 
+.overview-list ul {
+  position: relative;
+  right: 5rem;
+}
+
+.ov-test {
+  position: relative;
+  left: -5rem;
+}
+
 .blue-rect {
   width: 222px;
   height: 455px;
   border-radius: 0px 20px 0px 0px;
   background: #c4d9f3;
-  position: relative;
-  right: 15%;
+  position: absolute;
+  top: 0;
+  left: 16rem;
+  z-index: -1;
 }
 
 .red-rect {
@@ -322,8 +340,8 @@ p {
   height: 28px;
   background: #ff0404;
   position: absolute;
-  left: 11rem;
-  transform: translateY(36rem);
+  left: 5rem;
+  transform: translateY(20px);
 }
 
 .incentive-card {
@@ -427,11 +445,11 @@ p {
   margin-top: 80px;
 }
 
-/*.testimony-carousel-container {
+.testimony-carousel-container {
   padding: 0 30px 0 30px;
-  transform: translateX(50px);
+  transform: translateX(-60px);
   margin-bottom: 30px;
-}*/
+}
 
 .t-carousel-container {
   /*border: 1px solid orange;*/
@@ -534,7 +552,7 @@ p {
 
 .testimony-carousel-content  .react-multi-carousel-dot-list {
   position: absolute;
-  transform: translateX(65px);
+  transform: translateX(10rem);
   left: 40rem;
   right: 60rem;
 }
@@ -591,7 +609,7 @@ p {
   border-radius: 20px;
 }
 
-@media (min-width: 1600px) {
+/*@media (min-width: 1600px) {
   .home-body {
     width: 90%;
   }
@@ -665,4 +683,4 @@ p {
     transform: translateX(50px);
     margin-left: 40px;
   }
-}
+}*/

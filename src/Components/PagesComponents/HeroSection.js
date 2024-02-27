@@ -67,16 +67,18 @@ const HeroSection = () => {
         </div>
         <div className="donate-start-card1">
           <img src="assets/africa-humanitarian-aid-doctor-taking-care-patient.svg" />
-          <h3>Join us, Donate Blood and Save Lives</h3>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy{" "}
-          </p>
-          {button && (
-            <Button buttonStyle="btn--primary" buttonSize="btn--small">
-              Get Started
-            </Button>
-          )}
+          <div className="donate-start-card1-text">
+            <h3>Join us, Donate Blood and Save Lives</h3>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy{" "}
+            </p>
+            {button && (
+              <Button buttonStyle="btn--primary" buttonSize="btn--small">
+                Get Started
+              </Button>
+            )}
+          </div>
         </div>
         <div className="product-card1-container">
           {PrcData.map((d) => (
@@ -110,20 +112,23 @@ const HeroSection = () => {
               <li>Donate: by Giving the gift of life</li>
               <li>Track impact to See your contribution in real-time</li>
             </ul>
-            
-          {button && (
-            <Button buttonStyle="btn--primary" buttonSize="btn--small">
-              Get Started
-            </Button>
-          )}
+
+            {button && (
+              <Button buttonStyle="btn--primary" buttonSize="btn--small">
+                Get Started
+              </Button>
+            )}
           </div>
         </div>
         <div className="overview-container">
           <div className="overview-header">Process Overview</div>
           <div className="overview-content-card">
-            <img src="assets/Rectangle 119.png" alt="/" />
-            <div className="blue-rect"></div>
-            <div className="red-rect"></div>
+            <div className="ov-test">
+              <img src="assets/Rectangle 119.png" alt="/" />
+              <div className="blue-rect"></div>
+              <div className="red-rect"></div>
+            </div>
+
             <OverviewList data={overviewData} />
           </div>
         </div>

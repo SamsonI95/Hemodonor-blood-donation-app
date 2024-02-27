@@ -42,7 +42,7 @@
   content: counter(step-counter); /* Use the counter value as content */
   counter-increment: step-counter; /* Increment the counter for each item */
   position: absolute;
-  left: 56%;
+  left: -3rem;
   transform: translateY(-50%);
   width: 40px; /* Adjust to control the circle size */
   height: 40px; /* Adjust to control the circle size */
@@ -56,10 +56,4 @@
   font-weight: bold;
   font-size: 30px;
   margin-top: 25px;
-}
-
-@media (min-width: 1600px) {
-  .overview-item::before {
-    left: -3rem;
-  }
 }
