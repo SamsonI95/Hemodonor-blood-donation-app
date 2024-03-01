@@ -17,6 +17,9 @@ function Footer() {
     <>
       <footer>
         <div className="footer-donate">
+          <div className="footer-logo-container">
+            <img src="assets/footer-Logo.png" alt="logo" />
+          </div>
           <h3>Ready to get started?</h3>
           {button && (
             <Button buttonStyle="btn--primary" buttonSize="btn--small">
@@ -38,9 +41,9 @@ function Footer() {
             <div className="legal-card">
               <Link to="/terms">Terms & Conditions</Link>
               <Link to="/privacy">Privacy Policy</Link>
+            </div>
           </div>
-          </div>
-        
+
           <div className="content-1">
             <ul>
               <li>
@@ -92,9 +95,15 @@ function Footer() {
               </li>
             </ul>
             <div className="socials-container">
-              <span><FontAwesomeIcon icon={faFacebookF} /></span>
-              <span><FontAwesomeIcon icon={faXTwitter} /></span>
-              <span><FontAwesomeIcon icon={faInstagram} /></span>
+              <span>
+                <FontAwesomeIcon icon={faFacebookF} />
+              </span>
+              <span>
+                <FontAwesomeIcon icon={faXTwitter} />
+              </span>
+              <span>
+                <FontAwesomeIcon icon={faInstagram} />
+              </span>
             </div>
           </div>
         </div>

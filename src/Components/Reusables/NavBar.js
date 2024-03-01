@@ -1,7 +1,14 @@
+//App
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+
+//Component
 import Popup from "./Popup";
 import { Button } from "./Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
+
+//Style
 import "./NavBar.css";
 
 const NavBar = () => {
@@ -14,6 +21,13 @@ const NavBar = () => {
     setSelectedLink(link);
   };
 
+  //Mobile NavBar logic
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleToggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   //dropdown logic
   const [popup, setPopup] = useState(false);
   const handlePopupClick = () => {
@@ -23,7 +37,22 @@ const NavBar = () => {
   return (
     <>
       <nav>
-        <ul className="nav-menu-items">
+        <div className="logo-container">
+          <img src="assets/Logo.png" alt="logo" />
+        </div>
+        <div className="menu-icon" onClick={handleToggleMenu}>
+          <FontAwesomeIcon icon={faBars} />
+        </div>
+        <ul
+          className={`nav-menu-items ${
+            menuOpen ? "active" : ""
+          }`}
+        >
+          <div className="close-button">
+            <i onClick={handleToggleMenu}>
+              <FontAwesomeIcon icon={faX} />
+            </i>
+          </div>
           <Link
             to="/home"
             onClick={() => handleLinkClick("home")}

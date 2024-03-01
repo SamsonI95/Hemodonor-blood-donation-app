@@ -1,4 +1,4 @@
-.overview-list  {
+.overview-list {
   list-style-type: none; /* Remove default numbering */
   counter-reset: step-counter; /* Reset the counter for numbering */
 }
@@ -8,8 +8,8 @@
 }
 
 .overview-item {
-    margin-bottom: 20px;
-    /*margin-left: 25px;*/
+  margin-bottom: 20px;
+  /*margin-left: 25px;*/
 }
 
 .overview-item h3 {
@@ -56,4 +56,28 @@
   font-weight: bold;
   font-size: 30px;
   margin-top: 25px;
+}
+
+@media only screen and (max-width: 768px) {
+  .overview-list {
+  }
+
+  .overview-item {
+    width: 250px;
+  }
+
+  .overview-item h3 {
+    font-size: 14px;
+    width: 300px;
+  }
+
+  .overview-item p {
+    font-size: 12px;
+    width: 300px;
+  }
+
+  .overview-list ul  {
+    position: relative;
+    left: -19px;
+  }
 }

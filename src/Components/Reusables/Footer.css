@@ -86,8 +86,8 @@ footer {
 .content-1,
 .content-2,
 .content-3 {
-    margin-right: 120px;
-    transform: translateX(80px);
+  margin-right: 120px;
+  transform: translateX(80px);
 }
 
 .content-1 ul {
@@ -102,16 +102,16 @@ footer {
   list-style-type: none;
 }
 
-.content-1 ul  li {
-    margin-bottom: 20px;
+.content-1 ul li {
+  margin-bottom: 20px;
 }
 
-.content-2 ul  li {
-    margin-bottom: 20px;
+.content-2 ul li {
+  margin-bottom: 20px;
 }
 
-.content-3 ul  li {
-    margin-bottom: 20px;
+.content-3 ul li {
+  margin-bottom: 20px;
 }
 
 .content-1 a {
@@ -123,7 +123,6 @@ footer {
   line-height: normal;
   letter-spacing: -0.232px;
   text-decoration: none;
-  
 }
 .content-2 a {
   color: #000;
@@ -147,9 +146,75 @@ footer {
 }
 
 .socials-container {
-    transform: translateY(10.5rem);
+  transform: translateY(10.5rem);
 }
 
 .socials-container span {
-    margin-right: 20px;
+  margin-right: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  footer {
+    width: 500px;
+    height: 800px;
+    transform: translateY(60rem);
+  }
+
+  .footer-donate {
+    transform: translateX(0);
+    margin-top: 0;
+  }
+
+  .footer-donate h3 {
+    font-size: 20px;
+    position: relative;
+    top: 2rem;
+    left: 23rem;
+    margin-top: 3rem;
+    width: 400px;
+  }
+
+  .footer-logo-container {
+    position: relative;
+    left: 28rem;
+  }
+
+  .footer-donate button {
+    transform: translate(12rem, 4rem);
+  }
+
+  .footer-middle-content-contaier {
+    width: 500px;
+  }
+
+  .newsletter {
+    position: relative;
+    top: 14rem;
+    left: -5.5rem;
+  }
+
+  .content-1,
+  .content-2,
+  .content-3 {
+    margin-right: 60px;
+    transform: translateX(-19rem);
+  }
+
+  .socials-container {
+    display: none;
+  }
+
+  .email-field {
+    display: flex;
+  }
+
+  .legal-card  {
+    transform: translate(0);
+    width: 300px;
+  }
+
+  .legal-card a  {
+    margin: 0;
+    width: 100px;
+  }
 }

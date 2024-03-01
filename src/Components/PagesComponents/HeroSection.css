@@ -613,6 +613,199 @@ p {
   border-radius: 20px;
 }
 
+@media only screen and (max-width: 768px) {
+  /*.home-body {
+    margin: 0 10px;
+  }*/
+
+  .main-donate-card {
+    width: 430px;
+  }
+
+  .main-donate-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .main-donate-card p {
+    font-size: 14px;
+    width: 306px;
+  }
+
+  .main-donate-card button {
+    left: 30%;
+  }
+
+  .main-donate-card #find {
+    font-size: 14px;
+    width: 306px;
+    top: 20px;
+  }
+
+  .donor-search-container {
+    width: 330px;
+  }
+
+  .donor-search-container .search-bar input {
+    width: 170px;
+    left: 0;
+    padding-left: 0;
+    text-indent: 15px;
+  }
+
+  .donor-search-container .search-bar input::placeholder {
+    font-size: 10px;
+    text-indent: 15px;
+  }
+
+  .donor-search-container .search-bar Button {
+    top: 50px;
+  }
+
+  .sponsors-container {
+    display: none;
+    width: 450px;
+    height: fit-content;
+    overflow: scroll;
+  }
+  .donate-start-card1 {
+    flex-direction: column;
+  }
+
+  .donate-start-card1 > img {
+    width: 390px;
+    height: 245px;
+    border-radius: 10px;
+  }
+
+  .donate-start-card1-text {
+    right: 0;
+    width: 373px;
+  }
+
+  .donate-start-card1 h3,
+  p {
+    margin-top: 20px;
+  }
+
+  .donate-start-card1 p {
+    width: fit-content;
+  }
+
+  .product-card1-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-text p {
+    top: 30px;
+  }
+
+  .discovery-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dis-content-card {
+    display: block;
+    transform: translateY(0);
+  }
+
+  .dis-content-card img {
+    left: 1rem;
+  }
+
+  .dis-content-card ul {
+    width: 450px;
+  }
+
+  .dis-content-card ul li {
+    left: 0;
+  }
+
+  .discovery-container Button {
+    left: 10px;
+    transform: translateY(3rem);
+  }
+
+  .overview-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .overview-list {
+    position: absolute;
+    margin: 0 auto;
+    transform: translateY(40rem) translateX(4rem);
+    width: 300px;
+  }
+
+  .incentive-card {
+    display: flex;
+    flex-direction: column;
+    transform: translateY(40%);
+    margin-top: 0;
+  }
+
+  .incentive-card-header,
+  .incentive-card-header > p {
+    width: 349px;
+  }
+
+  .incentive-card-header > p {
+    margin-left: 0;
+  }
+
+  .incentive-product-card-container,
+  .incentive-product-card-container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .incentive-product-card-container2 {
+    position: relative;
+    left: 13px;
+  }
+
+  .testimony-container {
+    transform: translateY(65rem);
+    margin-top: 0;
+  }
+
+  .testimony-header {
+    width: 250px;
+    margin-bottom: 0;
+  }
+
+  .testimony-carousel-content {
+    transform: translateY(-5rem) translateX(4rem);
+  }
+
+  .bottom-card-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 60rem;
+  }
+
+  .bottom-card-text {
+    position: relative;
+    transform: translateY(0);
+    left: 0;
+  }
+
+  .bottom-card-image {
+    transform: translateX(0) translateY(2rem);
+  }
+
+  .bottom-card-image img {
+    width: 394px;
+    height: 192px;
+  }
+}
+
 @media (max-width: 1400px) {
   .item-1-3 {
     transform: translateX(4rem);

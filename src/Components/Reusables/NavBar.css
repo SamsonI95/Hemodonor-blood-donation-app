@@ -1,10 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@700&family=Oswald:wght@600&family=Poppins&display=swap");
 
 nav {
-padding:  30px;
+  padding: 30px;
+  margin: 0 auto;
+  display: inline-flex;
+  align-items: center;
   /*padding-top: 50px;
   padding-left: 430px;
   padding-right: 100px;*/
+}
+
+.menu-icon {
+  display: none;
+}
+
+.close-button {
+  display: none;
 }
 
 .nav-menu-items {
@@ -15,8 +26,26 @@ padding:  30px;
   margin-top: 13px;
   align-items: center;
   gap: 37px;
-  transform: translateX(-60px);
+  transform: translateX(15rem);
 }
+
+/*.responsive-menu {
+  position: fixed;
+  top: -100%;
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  height: 500px;
+  border: 1px solid #a4a4a4;
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  transition: 850ms;
+  z-index: 10;
+}
+
+.responsive-menu.active {
+  top: 5rem;
+}*/
 
 .nav-menu-items a {
   color: #23272b;
@@ -29,7 +58,7 @@ padding:  30px;
 }
 
 .selected {
-    border-bottom: 5px solid #BFDBF7;
+  border-bottom: 5px solid #bfdbf7;
 }
 
 .nav-menu-items a.selected::after {
@@ -62,8 +91,76 @@ padding:  30px;
   cursor: pointer;
 }
 
+/*Mobile device orientation*/
+@media only screen and (max-width: 768px) {
+  nav {
+    width: 500px;
+    margin: 0;
+  }
+
+  .logo-container {
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+  }
+
+  .nav-menu-items {
+    position: fixed;
+    top: 5rem;
+    display: none;
+    flex-direction: column;
+    width: 450px;
+    height: 500px;
+    border: 1px solid #a4a4a4;
+    background: #fff;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: top 0.3s ease-in-out;
+    z-index: 10;
+    transform: translateX(0);
+  }
+
+  .nav-menu-items.active {
+    display: flex;
+  }
+
+  .nav-menu-items a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    width: 152px;
+    transform: translateX(1rem) translateY(1rem);
+  }
+
+  .nav-menu-items a:hover {
+    color: #fe0101;
+  }
+
+  .nav-menu-items {
+    margin: 0 auto;
+  }
+
+  .button {
+    display: none;
+  }
+}
+
+/*Laregr monitor sizes */
 @media (min-width: 1600px) {
   .nav-menu-items {
-    transform: translateX(-40px);
+    transform: translateX(30rem);
+  }
+
+  .logo-container {
+    transform: translateX(7rem);
   }
 }

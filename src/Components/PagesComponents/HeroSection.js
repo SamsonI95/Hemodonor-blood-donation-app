@@ -27,6 +27,11 @@ const HeroSection = () => {
       items: 3,
       slidesToSlide: 3,
     },
+    mobile: {
+      breakpoint: { max: 768, min: 0 },
+      items: 1,
+      slidesToSlide: 1,
+    }
   };
 
   return (
@@ -39,12 +44,12 @@ const HeroSection = () => {
             blood donation can save lives or up to three people.
           </p>
           {button && (
-            <Button buttonStyle="btn--primary" buttonSize="btn--small">
+            <Button buttonStyle="btn--primary" buttonSize="btn--small" id="donate">
               Donate Now
             </Button>
           )}
           <div className="donor-search-container">
-            <p>Find a Donor/Find a recipient</p>
+            <p id="find">Find a Donor/Find a recipient</p>
             <div className="search-bar">
               <input type="text" placeholder="Enter address or Blood Type" />
               <div className="bottom-right-radius"></div>

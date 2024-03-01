@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@700&family=Oswald:wght@600&family=Poppins&display=swap");
 
 :root {
-  --primary-button: #EE4B2B;
+  --primary-button: #ee4b2b;
   --validate-button: #fff;
 }
 
@@ -77,4 +77,20 @@
   border-radius: 10px;
   border: none;
   box-shadow: 0px 4px 90px 2px rgba(165, 164, 164, 0.25);
+}
+
+@media only screen and (max-width: 768px) {
+  .btn--search {
+    width: 100px;
+    height: 40px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .btn--primary:hover {
+    background-color: #FE0101;
+    border: 1px solid #FE0101;
+    color: #000;
+  }
 }
