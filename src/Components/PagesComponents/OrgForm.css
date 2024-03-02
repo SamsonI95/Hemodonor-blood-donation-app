@@ -15,6 +15,7 @@
 
 .head {
   display: flex;
+  margin-top: 4rem;
 }
 
 .head input {
@@ -24,12 +25,11 @@
   border-radius: 10px;
   border: 1px solid #454444;
   background: #fff;
-  margin-bottom: 30px;
-  transform: translateX(40%);
+  transform: translateX(-11.5rem);
 }
 
 .head input::placeholder {
-  color: ##a9a9a9;
+  color: #a9a9a9;
   font-family: Poppins;
   font-size: 24px;
   font-style: normal;
@@ -38,23 +38,36 @@
   text-indent: 30px;
 }
 
-.org-form > .phone input {
+.phone {
+  margin-top: 4rem;
+}
+
+.phone input {
   width: 522px;
   height: 58px;
   flex-shrink: 0;
   border-radius: 10px;
   border: 1px solid #454444;
   background: #fff;
-  margin-left: 60px;
-  margin-bottom: 30px;
+  transform: translateX(-11.5rem);
 }
 
-.org-form > .name input {
+.name input {
   margin-left: 10%;
 }
 
-.org-form .head input {
-  margin-left: 5%;
+.oaddress input {
+  width: 460px;
+  height: 172px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: 1px solid #454444;
+  background: #fff;
+  font-size: 24px;
+  text-indent: 30px;
+  padding: 20px 0 200px 0;
+  margin-left: 70px;
+  transform: translateX(14rem);
 }
 
 .org-form > .submit {
@@ -68,5 +81,39 @@
 
 .org-form > .phone h3 {
   transform: translateY(15px);
+}
 
+@media only screen and (max-width: 768px) {
+  .name input {
+    margin-left: 0;
+  }
+
+  .oaddress input {
+    width: 390px;
+    margin-left: 0;
+    margin-top: 2rem;
+    transform: translateX(0);
+  }
+  
+  .head {
+    margin-top: 1rem;
+  }
+
+  .head input {
+    width: 390px;
+    margin-left: 0;
+    margin-top: 4rem;
+    transform: translateX(0);
+  }
+  
+  .phone input {
+    width: 390px;
+    margin-left: 0;
+    margin-top: 4rem;
+    transform: translateX(0);
+  }
+  
+  .org-form > .submit {
+    margin-top: 0;
+  }
 }

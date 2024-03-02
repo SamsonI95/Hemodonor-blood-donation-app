@@ -16,7 +16,7 @@ const OrgForm = () => {
           <h3>Organization Name</h3>
           <input type="text" placeholder="Name" />
         </div>
-        <div className="address">
+        <div className="oaddress">
           <h3>Address</h3>
           <input type="text" placeholder="Type here" />
         </div>
