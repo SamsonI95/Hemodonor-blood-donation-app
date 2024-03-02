@@ -551,7 +551,7 @@ p {
 
 .image-2 {
   float: right;
-  transform: translateX(-15px) translateY(50px);
+  transform: translateX(-15px) translateY(-10px);
 }
 
 .testimony-carousel-content .react-multi-carousel-dot-list {
