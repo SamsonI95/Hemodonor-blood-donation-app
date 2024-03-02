@@ -12,7 +12,7 @@ const OrgForm = () => {
         <h3>Register as a Organisation</h3>
       </div>
       <form className="org-form">
-        <div className="name">
+        <div className="oname">
           <h3>Organization Name</h3>
           <input type="text" placeholder="Name" />
         </div>

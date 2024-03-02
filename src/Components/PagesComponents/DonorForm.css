@@ -117,7 +117,7 @@
   background: #fff;
   font-size: 24px;
   text-indent: 30px;
-  transform: translateX(-6.5rem);
+  transform: translateX(-17rem);
 }
 
 .address h3 {
@@ -145,7 +145,7 @@
 
 .age h3 {
   position: absolute;
-  transform: translateY(15px);
+  transform: translateY(15px) translateX(3rem);
 }
 
 .age input {
@@ -158,12 +158,12 @@
   font-size: 24px;
   text-indent: 30px;
   margin-left: 50px;
-  transform: translateX(8.5rem);
+  transform: translateX(10.5rem);
 }
 
 .blood-group h3 {
   position: absolute;
-  transform: translateY(15px);
+  transform: translateY(15px) translateX(3rem);
 }
 
 .blood-group input {
@@ -176,7 +176,7 @@
   font-size: 24px;
   text-indent: 30px;
   margin-left: 30px;
-  transform: translateX(9.8rem);
+  transform: translateX(12rem);
 }
 
 .lga {
@@ -203,7 +203,7 @@
 
 .state h3 {
   position: absolute;
-  transform: translateY(15px);
+  transform: translateY(15px) translateX(3rem);
 }
 
 .state input {
@@ -215,7 +215,7 @@
   background: #fff;
   font-size: 24px;
   text-indent: 30px;
-  margin-left: 12rem;
+  margin-left: 13.5rem;
 }
 
 .postal {
