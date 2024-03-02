@@ -25,7 +25,7 @@
   border-radius: 10px;
   border: 1px solid #454444;
   background: #fff;
-  transform: translateX(-11.5rem);
+  transform: translateX(-7.5rem);
 }
 
 .head input::placeholder {
@@ -49,11 +49,11 @@
   border-radius: 10px;
   border: 1px solid #454444;
   background: #fff;
-  transform: translateX(-11.5rem);
+  transform: translateX(-4.5rem);
 }
 
 .oname input {
-  margin-left: 10%;
+  margin-left: 18.3rem;
   width: 460px;
   height: 58px;
   flex-shrink: 0;
