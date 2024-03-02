@@ -34,8 +34,7 @@ footer {
   flex-basis: 100%;
   align-items: center;
   justify-content: center;
-  transform: translateY(40%) translateX(-50px);
-  position: absolute;
+  transform: translateY(9%) translateX(-50px);
   width: 1068px;
   height: 350px;
 }
@@ -158,50 +157,64 @@ footer {
     width: 500px;
     height: 800px;
     transform: translateY(60rem);
+    margin: 0 auto;
+    padding: 0;
   }
 
   .footer-donate {
+    position: absolute;
+    left: -23px;
     transform: translateX(0);
-    margin-top: 0;
+    margin-top: 2rem;
+    width: 500px;
   }
 
   .footer-donate h3 {
     font-size: 20px;
     position: relative;
     top: 2rem;
-    left: 23rem;
+    left: -2rem;
     margin-top: 3rem;
     width: 400px;
   }
 
   .footer-logo-container {
     position: relative;
-    left: 28rem;
+    left: 3rem;
   }
 
   .footer-donate button {
-    transform: translate(12rem, 4rem);
+    transform: translate(-3rem, 4rem);
   }
 
   .footer-middle-content-contaier {
+    position: relative;
     width: 500px;
+    transform: translateX(0);
+    transform: translateY(5rem);
   }
 
   .newsletter {
     position: relative;
-    top: 14rem;
-    left: -5.5rem;
+    top: 25rem;
+    left: 8rem;
+    width: 350px;
+    height: 250px;
   }
 
   .content-1,
   .content-2,
   .content-3 {
+    height: fit-content;
     margin-right: 60px;
-    transform: translateX(-19rem);
+    transform: translate(-10rem, 5rem);
   }
 
   .socials-container {
-    display: none;
+    display: inline-flex;
+    position: relative;
+    top: 10rem;
+    left: -17rem;
   }
 
   .email-field {
@@ -209,12 +222,12 @@ footer {
   }
 
   .legal-card  {
-    transform: translate(0);
+    transform: translate(1rem, 1rem);
     width: 300px;
   }
 
   .legal-card a  {
     margin: 0;
-    width: 100px;
+    width: 200px;
   }
 }

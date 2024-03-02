@@ -43,7 +43,6 @@ function Footer() {
               <Link to="/privacy">Privacy Policy</Link>
             </div>
           </div>
-
           <div className="content-1">
             <ul>
               <li>
