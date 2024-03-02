@@ -25,9 +25,11 @@ const BloodBankPanel = () => {
                 </Button>
               )}
             </div>
-            <h3>{bank.title}</h3>
-            <p className="cnam">{bank.address}</p>
-            <p className="cnum">Contact Number: {bank.contact}</p>
+            <div className="blood-bank-entry-text">
+              <h3>{bank.title}</h3>
+              <p className="cnam">{bank.address}</p>
+              <p className="cnum">Contact Number: {bank.contact}</p>
+            </div>
           </div>
         ))}
       </div>

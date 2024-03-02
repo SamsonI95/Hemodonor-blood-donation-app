@@ -1,3 +1,9 @@
 .donor-body {
     overflow-x: hidden;
 }
+
+.toggle-button-switch {
+    position: relative;
+    /*left: 37%;*/
+    top: 30px;
+}

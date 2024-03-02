@@ -38,7 +38,7 @@
     text-align: left;
     width: 600px;
     white-space: pre-wrap;
-    transform: translateY(40px);
+    transform: translateY(40px) translateX(-18rem);
 }
 
 .blood-bank-entry .cnum {
@@ -47,4 +47,31 @@
 
 .bank-card-button {
   float: right;
+}
+
+@media only screen and (max-width: 768px) {
+  .blood-bank-entry {
+    width: 390px;
+    height: 334px;
+  }
+
+  .blood-bank-entry h3 {
+    font-size: 18px;
+  }
+  .blood-bank-entry p {
+    font-size: 18px;
+  }
+
+  .blood-bank-entry .cnam {
+    width: 300px;
+    transform: translate(-1rem, 2rem);
+  }
+
+  .blood-bank-entry .cnum {
+    transform: translateY(4rem);
+  }
+
+  .bank-card-button {
+    transform: translate(-10.3rem, 13rem);
+  }
 }

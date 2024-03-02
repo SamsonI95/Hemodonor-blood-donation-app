@@ -30,7 +30,7 @@ const RecipientDetails = () => {
   const handleRecipientSubmit = (e) => {
     e.preventDefault();
 
-    navigate("/donor-select");
+    navigate("/home");
   };
 
  const [state, setState] = useState()

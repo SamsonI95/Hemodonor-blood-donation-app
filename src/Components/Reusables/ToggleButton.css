@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
 .toggle-button {
   display: flex;
@@ -18,7 +18,7 @@
   height: 40px;
   flex-shrink: 0;
   border-radius: 30px;
-  background: #EE4B2B;
+  background: #ee4b2b;
   margin: 5px;
 }
 
@@ -27,7 +27,7 @@
   height: 40px;
   flex-shrink: 0;
   border-radius: 30px;
-  background: #EE4B2B;
+  background: #ee4b2b;
   margin: 5px 5px 5px 170px;
 }
 
@@ -63,11 +63,11 @@
 }
 
 .left-text {
-  transform: translateX(20px);
+  transform: translateX(19rem);
 }
 
 .right-text {
-  transform: translateX(5rem);
+  transform: translateX(-19rem);
 }
 
 .left-text h3 {
@@ -75,7 +75,7 @@
   font-size: 15px;
   font-style: normal;
   font-weight: 500;
-  line-height: 150%; 
+  line-height: 150%;
   letter-spacing: 0.336px;
   cursor: pointer;
   position: relative;
@@ -98,4 +98,14 @@
 
 .right-focused {
   background-color: white;
+}
+
+@media only screen and (max-width: 768px) {
+  .left-text {
+    transform: translateX(12rem);
+  }
+
+  .right-text {
+    transform: translateX(-13rem);
+  }
 }

@@ -43,11 +43,7 @@ const NavBar = () => {
         <div className="menu-icon" onClick={handleToggleMenu}>
           <FontAwesomeIcon icon={faBars} />
         </div>
-        <ul
-          className={`nav-menu-items ${
-            menuOpen ? "active" : ""
-          }`}
-        >
+        <ul className={`nav-menu-items ${menuOpen ? "active" : ""}`}>
           <div className="close-button">
             <i onClick={handleToggleMenu}>
               <FontAwesomeIcon icon={faX} />
@@ -68,7 +64,14 @@ const NavBar = () => {
           >
             Donate Blood
           </Link>
-          <a href="#">Find Donor</a>
+          <Link
+            to="/donor-select"
+            onClick={() => handleLinkClick("donor-selec")}
+            className={selectedLink === "donor-selec" ? "selected" : ""}
+          >
+            Find Donor
+          </Link>
+
           <Link
             to="#"
             onClick={() => handlePopupClick()}

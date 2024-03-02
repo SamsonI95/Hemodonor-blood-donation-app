@@ -1,8 +1,4 @@
-.toggle-button-switch {
-    position: relative;
-    left: 37%;
-    top: 30px;
-}
+
 
 .info-call-card {
     padding: 50px 55px;
@@ -38,9 +34,9 @@
   margin-bottom: 15px;
 }
 
-.call {
+/*.call {
   transform: translateX(19rem) translateY(15px);
-}
+}*/
 
 .call h4 {
   width: 159.457px;
@@ -90,12 +86,12 @@
   height: 1.5px;
   background: #b9b8b8;
   position: absolute;
-  left: 55px;
+  left: 10.6rem;
   margin: 20px 0;
 }
 
 .tag-2 {
-    transform: translateY(30px);
+    transform: translateY(3rem);
 }
 
 .dropdown-card-arrow {
@@ -104,7 +100,6 @@
 }
 
 .alert-text {
-  display: flex;
   margin-top: 20px;
 }
 
@@ -116,7 +111,7 @@
   font-weight: 400;
   line-height: normal;
   width: 492.236px;
-  margin-left: 10px;
+  transform: translateX(-17rem) translateY(-1rem);
 }
 
 .card-select {
@@ -141,4 +136,59 @@
   line-height: normal;
   transform: translateY(50px);
   margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .info-call-card-header {
+    flex-direction: column;
+    width: 390px;
+    height: 307px;
+  }
+
+  .info-call-card-header ul li {
+    font-size: 15px;
+    width: 352px;
+    transform: translateX(-9.5rem);
+  }
+
+  .call {
+    transform: translateX(-6rem) translateY(3rem);
+  }
+
+  .info-call-card-container {
+    width: 390px;
+    height: 930px;
+  }
+
+  .line-through {
+    width: 391px;
+    left: 3.4rem;
+    transform: translateY(6rem);
+  }
+
+  .refresh {
+    transform: translatex(2rem);
+  }
+
+  .tag-1 {
+    transform: translateY(5rem);
+  }
+
+  .tag-2 {
+    transform: translateY(10rem);
+  }
+
+  .alert-text > .warning-icon {
+    transform: translateY(-1rem);
+  }
+
+  .alert-text h3 {
+    width: 350px;
+    transform: translate(0);
+  }
+
+  .dropdown-card-arrow {
+    margin: 0;
+    transform: translateY(-1rem);
+  }
 }
