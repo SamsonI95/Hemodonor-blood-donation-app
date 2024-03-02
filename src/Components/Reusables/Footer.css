@@ -7,6 +7,11 @@ footer {
   /*display: flex;*/
 }
 
+.footer-logo-container {
+  position: absolute;
+  left: -50rem;
+}
+
 .footer-donate {
   float: right;
   display: flex;
@@ -34,7 +39,7 @@ footer {
   flex-basis: 100%;
   align-items: center;
   justify-content: center;
-  transform: translateY(9%) translateX(-50px);
+  transform: translateY(20%) translateX(-50px);
   width: 1068px;
   height: 350px;
 }
