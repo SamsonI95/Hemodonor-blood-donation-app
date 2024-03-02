@@ -51,7 +51,7 @@
 
 .info-call-card-container {
   width: 1240px;
-  height: 780px;
+  height: fit-content;
   border-radius: 10px;
   box-shadow: 0px 4px 90px 2px rgba(209, 205, 205, 0.25);
   padding: 14px 52px 14px 52px;
@@ -86,7 +86,7 @@
   height: 1.5px;
   background: #b9b8b8;
   position: absolute;
-  left: 10.6rem;
+  left: 3.5rem;
   margin: 20px 0;
 }
 

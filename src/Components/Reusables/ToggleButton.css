@@ -63,11 +63,11 @@
 }
 
 .left-text {
-  transform: translateX(19rem);
+  transform: translateX(15.5rem);
 }
 
 .right-text {
-  transform: translateX(-19rem);
+  transform: translateX(-15.5rem);
 }
 
 .left-text h3 {
