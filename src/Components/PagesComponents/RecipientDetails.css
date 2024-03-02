@@ -110,3 +110,50 @@
   position: relative;
   top: 35px;
 }
+
+@media only screen and (max-width: 768px) {
+  .rd-image-container {
+    transform: translateX(9.5rem);
+  }
+
+  .rd-image-container img {
+    width: 390px;
+    height: 390px;
+  }
+
+  .rd-details-container {
+    display: flex;
+    flex-direction: column;
+    transform: translate(-6rem, -3rem);
+  }
+
+  .rd-details-container > h4 {
+    transform: translate(-8rem, 39rem);
+  }
+
+  .form-control {
+    transform: translateX(0);
+  }
+
+  .bg-select {
+    transform: translate(-9rem, 33rem);
+  }
+
+  .bg-button-1 {
+    transform: translate(-13rem, 36rem);
+  }
+
+  .bg-select-2 {
+    top:38rem;
+    transform: translateX(-9rem);
+  }
+
+  .bg-select-3 {
+    top: 40rem;
+    transform: translateX(-9rem);
+  }
+
+  .bg-button-2 {
+    transform: translateX(-9rem) translateY(43rem);
+  }
+}
