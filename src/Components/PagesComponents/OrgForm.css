@@ -54,6 +54,14 @@
 
 .oname input {
   margin-left: 10%;
+  width: 460px;
+  height: 58px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: 1px solid rgba(69, 68, 68, 1);
+  background: #fff;
+  font-size: 24px;
+  text-indent: 30px;
 }
 
 .oaddress input {
