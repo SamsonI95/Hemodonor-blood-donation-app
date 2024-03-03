@@ -94,7 +94,7 @@ nav {
 /*Mobile device orientation*/
 @media only screen and (max-width: 768px) {
   nav {
-    width: 500px;
+    width: 410px;
     margin: 0;
   }
 
