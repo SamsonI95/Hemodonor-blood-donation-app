@@ -70,3 +70,33 @@
 .privacy-content ol {
   list-style-type: none;
 }
+
+@media only screen and (max-width: 768px) {
+  .header {
+    width: 500px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+  
+  .content {
+    width: 500px;
+    padding: 0 20px;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+  }
+
+  .time-update {
+    margin: 0;
+  }
+
+  .time-update h3 {
+    font-size: 18px;
+  }
+
+  .time-update h5 {
+    position: relative;
+    top: 15px;
+    left: -7rem;
+    font-size: 18px;
+  }
+}

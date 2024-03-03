@@ -161,7 +161,7 @@ footer {
   footer {
     width: 500px;
     height: 800px;
-    transform: translateY(60rem);
+    /*transform: translateY(60rem);*/
     margin: 0 auto;
     padding: 0;
   }

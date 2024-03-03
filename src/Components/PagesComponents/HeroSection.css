@@ -788,6 +788,7 @@ p {
     flex-direction: column;
     position: relative;
     top: 60rem;
+    margin-bottom: 70rem;
   }
 
   .bottom-card-text {
