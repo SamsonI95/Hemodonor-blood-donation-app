@@ -1,6 +1,7 @@
 //App
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 //Component
 import Popup from "./Popup";
@@ -19,6 +20,7 @@ const NavBar = () => {
   const [selectedLink, setSelectedLink] = useState(null);
   const handleLinkClick = (link) => {
     setSelectedLink(link);
+    setMenuOpen(!menuOpen);
   };
 
   //Mobile NavBar logic
@@ -32,12 +34,21 @@ const NavBar = () => {
   const [popup, setPopup] = useState(false);
   const handlePopupClick = () => {
     setPopup(!popup);
+    setMenuOpen(!menuOpen);
+  };
+
+  //Navigation logic
+  const navigate = useNavigate();
+
+  //Home Icon navigate
+  const handleHomeClick = () => {
+    navigate("/home");
   };
 
   return (
     <>
       <nav>
-        <div className="logo-container">
+        <div className="logo-container" onClick={handleHomeClick}>
           <img src="assets/Logo.png" alt="logo" />
         </div>
         <div className="menu-icon" onClick={handleToggleMenu}>

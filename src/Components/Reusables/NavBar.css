@@ -102,6 +102,7 @@ nav {
     position: absolute;
     top: 1rem;
     left: 2rem;
+    cursor: pointer;
   }
 
   .menu-icon {
